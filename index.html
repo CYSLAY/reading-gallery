@@ -962,16 +962,7 @@
             .modal-cover { width: 150px; height: 210px; }
             .modal-content { padding: 25px; }
         }
-    
-/* ===== 书脊装饰图懒加载 ===== */
-.shelf-book[data-lazy] {
-  --spine-art: none !important;
-}
-.shelf-book[data-lazy].is-visible {
-  --spine-art: var(--spine-art-real, none) !important;
-}
-
-</style>
+    </style>
 </head>
 <body>
     <div class="container">
@@ -1000,10 +991,9 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
-                    <button class="shelf-book" type="button" aria-label="打开《一个陌生女人的来信》读书笔记" data-book-id="moshinv" data-title="一个陌生女人的来信" data-date="读完 2026-08-08" data-cover="images/一个陌生女人的来信_封面.webp" style="--spine-art:url('images/spines/decorations/moshinv.webp');--spine-color:#E8E4DF;--spine-text:#1a1a1a;--spine-line:rgba(26,26,26,0.35);--book-height:190px;--book-width:46px;--hover-width:130px;">
-                        <span class="spine-art" aria-hidden="true"></span>
-                        <img class="spine-title-img" src="images/spines/moshinv.webp" alt="一个陌生女人的来信">
-                        <span class="spine-cover" style="background-image: url('images/一个陌生女人的来信_封面.webp');"></span>
+                                        <button class="shelf-book" type="button" aria-label="打开《一个陌生女人的来信》读书笔记" data-book-id="moshinv" data-title="一个陌生女人的来信" data-date="读完 2026-08-08" data-cover="images/一个陌生女人的来信_封面.webp" style="--spine-art:url('images/spines/decorations/moshinv.webp');--spine-color:#1a1a1a;--spine-text:#c83a32;--spine-line:rgba(200,58,50,0.42);--book-height:190px;--book-width:46px;--hover-width:128px;">
+                        <span class="spine-cover" style="background-image:url('images/一个陌生女人的来信_封面.webp');"></span>
+                        <img src="images/spines/moshinv.webp" alt="" class="spine-title-img">
                     </button>
                     <button class="shelf-book" type="button" aria-label="打开《菊与刀》读书笔记" data-book-id="juyudao" data-title="菊与刀" data-date="读完 2026-08-03" data-cover="images/菊与刀_封面.webp" style="--spine-art:url('images/spines/decorations/juyudao.webp');--spine-color:#F5F0EB;--spine-text:#B8283C;--spine-line:rgba(184,40,60,0.35);--book-height:190px;--book-width:54px;--hover-width:140px;">
                             <span class="spine-art" aria-hidden="true"></span>
@@ -1045,77 +1035,77 @@
                             <span class="spine-cover" style="background-image:url('images/沉睡的人鱼之家_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/renyu.webp" alt="沉睡的人鱼之家">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《这本书能让你戒烟》读书笔记" data-book-id="jieyan" data-title="这本书能让你戒烟" data-date="读完 2026-06-14" data-cover="images/这本书能让你戒烟_封面.webp" style="--spine-art:url('images/spines/decorations/jieyan.webp');--spine-color:#3A5F0B;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:172px;--book-width:44px;--hover-width:132px;">
+                        <button class="shelf-book" type="button" aria-label="打开《这本书能让你戒烟》读书笔记" data-book-id="jieyan" data-title="这本书能让你戒烟" data-date="读完 2026-06-14" data-cover="images/这本书能让你戒烟_封面.webp" style="--spine-art:url('images/spines/decorations/jieyan.webp');--spine-color:#3A5F0B;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:172px;--book-width:44px;--hover-width:132px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/这本书能让你戒烟_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/jieyan.webp" alt="这本书能让你戒烟">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《富爸爸穷爸爸》读书笔记" data-book-id="fubaba" data-title="富爸爸穷爸爸" data-date="读完 2026-06-11" data-cover="images/富爸爸穷爸爸_封面.webp" style="--spine-art:url('images/spines/decorations/fubaba.webp');--spine-color:#5C1840;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:190px;--book-width:45px;--hover-width:133px;">
+                        <button class="shelf-book" type="button" aria-label="打开《富爸爸穷爸爸》读书笔记" data-book-id="fubaba" data-title="富爸爸穷爸爸" data-date="读完 2026-06-11" data-cover="images/富爸爸穷爸爸_封面.webp" style="--spine-art:url('images/spines/decorations/fubaba.webp');--spine-color:#5C1840;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:190px;--book-width:45px;--hover-width:133px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/富爸爸穷爸爸_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/fubaba.webp" alt="富爸爸穷爸爸">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《当下的力量》读书笔记" data-book-id="dangxia" data-title="当下的力量" data-date="读完 2026-06-09" data-cover="images/当下的力量_封面.webp" style="--spine-art:url('images/spines/decorations/dangxia.webp');--spine-color:#a01648;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:190px;--book-width:53px;--hover-width:141px;">
+                        <button class="shelf-book" type="button" aria-label="打开《当下的力量》读书笔记" data-book-id="dangxia" data-title="当下的力量" data-date="读完 2026-06-09" data-cover="images/当下的力量_封面.webp" style="--spine-art:url('images/spines/decorations/dangxia.webp');--spine-color:#a01648;--spine-text:#ffffff;--spine-line:rgba(255,255,255,0.35);--book-height:190px;--book-width:53px;--hover-width:141px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/当下的力量_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/dangxia.webp" alt="当下的力量">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《窄门》读书笔记" data-book-id="zhaimen" data-title="窄门" data-date="读完 2026-06-07" data-cover="images/窄门_封面.webp" style="--spine-art:url('images/spines/decorations/zhaimen.webp');--spine-color:#e8e4dc;--spine-text:#1a1a18;--spine-line:rgba(26,26,24,0.38);--book-height:172px;--book-width:34px;--hover-width:122px;">
+                        <button class="shelf-book" type="button" aria-label="打开《窄门》读书笔记" data-book-id="zhaimen" data-title="窄门" data-date="读完 2026-06-07" data-cover="images/窄门_封面.webp" style="--spine-art:url('images/spines/decorations/zhaimen.webp');--spine-color:#e8e4dc;--spine-text:#1a1a18;--spine-line:rgba(26,26,24,0.38);--book-height:172px;--book-width:34px;--hover-width:122px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/窄门_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/zhaimen.webp" alt="窄门">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《目送》读书笔记" data-book-id="musong" data-title="目送" data-date="读完 2026-06-06" data-cover="images/目送_封面.webp" style="--spine-art:url('images/spines/decorations/musong.webp');--spine-color:#c4ddd8;--spine-text:#2a2a28;--spine-line:rgba(42,42,40,0.36);--book-height:190px;--book-width:52px;--hover-width:140px;">
+                        <button class="shelf-book" type="button" aria-label="打开《目送》读书笔记" data-book-id="musong" data-title="目送" data-date="读完 2026-06-06" data-cover="images/目送_封面.webp" style="--spine-art:url('images/spines/decorations/musong.webp');--spine-color:#c4ddd8;--spine-text:#2a2a28;--spine-line:rgba(42,42,40,0.36);--book-height:190px;--book-width:52px;--hover-width:140px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/目送_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/musong.webp" alt="目送">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《2028年全球智能危机》读书笔记" data-book-id="intelligence2028" data-title="2028年全球智能危机" data-date="读完 2026-06-02" data-cover="images/2028年全球智能危机_封面.webp" style="--spine-art:url('images/spines/decorations/intelligence2028.webp');--spine-color:#f4f1e4;--spine-text:#232323;--spine-line:rgba(35,35,35,0.34);--book-height:190px;--book-width:48px;--hover-width:136px;">
+                        <button class="shelf-book" type="button" aria-label="打开《2028年全球智能危机》读书笔记" data-book-id="intelligence2028" data-title="2028年全球智能危机" data-date="读完 2026-06-02" data-cover="images/2028年全球智能危机_封面.webp" style="--spine-art:url('images/spines/decorations/intelligence2028.webp');--spine-color:#f4f1e4;--spine-text:#232323;--spine-line:rgba(35,35,35,0.34);--book-height:190px;--book-width:48px;--hover-width:136px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/2028年全球智能危机_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/intelligence2028.webp" alt="2028年全球智能危机">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《解忧杂货店》读书笔记" data-book-id="namiya" data-title="解忧杂货店" data-date="读完 2026-05-31" data-cover="images/解忧杂货店_封面.webp" style="--spine-art:url('images/spines/decorations/namiya.webp');--spine-color:#345c49;--spine-text:#f7e8b9;--spine-line:rgba(247,232,185,0.46);--book-height:206px;--book-width:35px;--hover-width:123px;">
+                        <button class="shelf-book" type="button" aria-label="打开《解忧杂货店》读书笔记" data-book-id="namiya" data-title="解忧杂货店" data-date="读完 2026-05-31" data-cover="images/解忧杂货店_封面.webp" style="--spine-art:url('images/spines/decorations/namiya.webp');--spine-color:#345c49;--spine-text:#f7e8b9;--spine-line:rgba(247,232,185,0.46);--book-height:206px;--book-width:35px;--hover-width:123px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/解忧杂货店_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/namiya.webp" alt="解忧杂货店">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《我们仨》读书笔记" data-book-id="yangjiang" data-title="我们仨" data-date="读完 2026-05-26" data-cover="images/我们仨_封面.webp" style="--spine-art:url('images/spines/decorations/yangjiang.webp');--spine-color:#f3eadb;--spine-text:#5b3428;--spine-line:rgba(91,52,40,0.42);--book-height:206px;--book-width:43px;--hover-width:131px;">
+                        <button class="shelf-book" type="button" aria-label="打开《我们仨》读书笔记" data-book-id="yangjiang" data-title="我们仨" data-date="读完 2026-05-26" data-cover="images/我们仨_封面.webp" style="--spine-art:url('images/spines/decorations/yangjiang.webp');--spine-color:#f3eadb;--spine-text:#5b3428;--spine-line:rgba(91,52,40,0.42);--book-height:206px;--book-width:43px;--hover-width:131px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/我们仨_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/yangjiang.webp" alt="我们仨">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《人生的智慧》读书笔记" data-book-id="wisdom" data-title="人生的智慧" data-date="读完 2026-05-24" data-cover="images/人生的智慧_封面.webp" style="--spine-art:url('images/spines/decorations/wisdom.webp');--spine-color:#252724;--spine-text:#f0cf52;--spine-line:rgba(240,207,82,0.42);--book-height:190px;--book-width:58px;--hover-width:146px;">
+                        <button class="shelf-book" type="button" aria-label="打开《人生的智慧》读书笔记" data-book-id="wisdom" data-title="人生的智慧" data-date="读完 2026-05-24" data-cover="images/人生的智慧_封面.webp" style="--spine-art:url('images/spines/decorations/wisdom.webp');--spine-color:#252724;--spine-text:#f0cf52;--spine-line:rgba(240,207,82,0.42);--book-height:190px;--book-width:58px;--hover-width:146px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/人生的智慧_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/wisdom.webp" alt="人生的智慧">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《创始人行动手册》读书笔记" data-book-id="founders" data-title="创始人行动手册" data-date="读完 2026-05-19" data-cover="images/founders_playbook_封面.webp" style="--spine-art:url('images/spines/decorations/founders.webp');--spine-color:#d97859;--spine-text:#161616;--spine-line:rgba(22,22,22,0.34);--book-height:190px;--book-width:42px;--hover-width:130px;">
+                        <button class="shelf-book" type="button" aria-label="打开《创始人行动手册》读书笔记" data-book-id="founders" data-title="创始人行动手册" data-date="读完 2026-05-19" data-cover="images/founders_playbook_封面.webp" style="--spine-art:url('images/spines/decorations/founders.webp');--spine-color:#d97859;--spine-text:#161616;--spine-line:rgba(22,22,22,0.34);--book-height:190px;--book-width:42px;--hover-width:130px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/founders_playbook_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/founders.webp" alt="创始人行动手册">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《真希望我父母读过这本书》读书笔记" data-book-id="perry" data-title="真希望我父母读过这本书" data-date="读完 2026-05-15" data-cover="images/真希望我父母读过这本书_封面.webp" style="--spine-art:url('images/spines/decorations/perry.webp');--spine-color:#d88931;--spine-text:#fff7e8;--spine-line:rgba(255,247,232,0.46);--book-height:206px;--book-width:55px;--hover-width:143px;">
+                        <button class="shelf-book" type="button" aria-label="打开《真希望我父母读过这本书》读书笔记" data-book-id="perry" data-title="真希望我父母读过这本书" data-date="读完 2026-05-15" data-cover="images/真希望我父母读过这本书_封面.webp" style="--spine-art:url('images/spines/decorations/perry.webp');--spine-color:#d88931;--spine-text:#fff7e8;--spine-line:rgba(255,247,232,0.46);--book-height:206px;--book-width:55px;--hover-width:143px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/真希望我父母读过这本书_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/perry.webp" alt="真希望我父母读过这本书">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《你一生的故事》读书笔记" data-book-id="chiang" data-title="你一生的故事" data-date="读完 2026-05-15" data-cover="images/你一生的故事_封面.webp" style="--spine-art:url('images/spines/decorations/chiang.webp');--spine-color:#171817;--spine-text:#f2f0e6;--spine-line:rgba(242,240,230,0.38);--book-height:190px;--book-width:37px;--hover-width:125px;">
+                        <button class="shelf-book" type="button" aria-label="打开《你一生的故事》读书笔记" data-book-id="chiang" data-title="你一生的故事" data-date="读完 2026-05-15" data-cover="images/你一生的故事_封面.webp" style="--spine-art:url('images/spines/decorations/chiang.webp');--spine-color:#171817;--spine-text:#f2f0e6;--spine-line:rgba(242,240,230,0.38);--book-height:190px;--book-width:37px;--hover-width:125px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/你一生的故事_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/chiang.webp" alt="你一生的故事">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《洛克菲勒写给儿子的38封信》读书笔记" data-book-id="lukefule" data-title="洛克菲勒写给儿子的38封信" data-date="读完 2026-05-10" data-cover="images/洛克菲勒38封信_封面.webp" style="--spine-art:url('images/spines/decorations/lukefule.webp');--spine-color:#f6f0df;--spine-text:#2f3030;--spine-line:rgba(238,91,55,0.45);--book-height:172px;--book-width:54px;--hover-width:142px;">
+                        <button class="shelf-book" type="button" aria-label="打开《洛克菲勒写给儿子的38封信》读书笔记" data-book-id="lukefule" data-title="洛克菲勒写给儿子的38封信" data-date="读完 2026-05-10" data-cover="images/洛克菲勒38封信_封面.webp" style="--spine-art:url('images/spines/decorations/lukefule.webp');--spine-color:#f6f0df;--spine-text:#2f3030;--spine-line:rgba(238,91,55,0.45);--book-height:172px;--book-width:54px;--hover-width:142px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/洛克菲勒38封信_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/lukefule.webp" alt="洛克菲勒写给儿子的38封信">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《蔡康永的说话之道》读书笔记" data-book-id="cai" data-title="蔡康永的说话之道" data-date="读完 2026-05-09" data-cover="images/说话之道_封面.webp" style="--spine-art:url('images/spines/decorations/cai.webp');--spine-color:#25304d;--spine-text:#f5ecd7;--spine-line:rgba(245,236,215,0.44);--book-height:156px;--book-width:40px;--hover-width:128px;">
+                        <button class="shelf-book" type="button" aria-label="打开《蔡康永的说话之道》读书笔记" data-book-id="cai" data-title="蔡康永的说话之道" data-date="读完 2026-05-09" data-cover="images/说话之道_封面.webp" style="--spine-art:url('images/spines/decorations/cai.webp');--spine-color:#25304d;--spine-text:#f5ecd7;--spine-line:rgba(245,236,215,0.44);--book-height:156px;--book-width:40px;--hover-width:128px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/说话之道_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/cai.webp" alt="蔡康永的说话之道">
                         </button>
-                        <button class="shelf-book" type="button" data-lazy aria-label="打开《我胆小如鼠》读书笔记" data-book-id="yuhua" data-title="我胆小如鼠" data-date="读完 2026-05-06" data-cover="images/我胆小如鼠_封面.webp" style="--spine-art:url('images/spines/decorations/yuhua.webp');--spine-color:#f1eadf;--spine-text:#c83a32;--spine-line:rgba(200,58,50,0.42);--book-height:172px;--book-width:47px;--hover-width:135px;">
+                        <button class="shelf-book" type="button" aria-label="打开《我胆小如鼠》读书笔记" data-book-id="yuhua" data-title="我胆小如鼠" data-date="读完 2026-05-06" data-cover="images/我胆小如鼠_封面.webp" style="--spine-art:url('images/spines/decorations/yuhua.webp');--spine-color:#f1eadf;--spine-text:#c83a32;--spine-line:rgba(200,58,50,0.42);--book-height:172px;--book-width:47px;--hover-width:135px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <span class="spine-cover" style="background-image:url('images/我胆小如鼠_封面.webp');"></span>
                             <img class="spine-title-img" src="images/spines/yuhua.webp" alt="我胆小如鼠">
@@ -1128,23 +1118,13 @@
 
         <div class="books-grid">
 
-            <!-- 一个陌生女人的来信 -->
+                        <!-- 一个陌生女人的来信 -->
             <div class="book-card" onclick="openModal('moshinv')">
-                <div class="book-cover-wrapper">
-                    <img class="book-cover" src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信封面">
-                </div>
+                <img src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信" class="book-cover">
                 <div class="book-info">
-                    <div class="finish-date">读完 2026-08-08</div>
-                    <div class="book-title">《一个陌生女人的来信》</div>
-                    <div class="book-meta">[奥]斯特凡·茨威格 著 / 上海译文出版社</div>
-                    <div class="book-tags">
-                        <span class="tag">#文学</span>
-                        <span class="tag">#茨威格</span>
-                        <span class="tag">#短篇小说</span>
-                        <span class="tag">#心理描写</span>
-                    </div>
-                    <div class="book-summary">少女的情窦初开、成年的迷恋、少妇的痛苦——茨威格用极其细腻的笔触，把一个女人一生的隐秘爱恋写得惊心动魄。</div>
-                    <div class="click-hint">查看完整笔记 ↓</div>
+                    <h3>一个陌生女人的来信</h3>
+                    <p class="book-author">[奥] 斯特凡·茨威格</p>
+                    <p class="book-summary">少女的情窦初开、成年的迷恋、少妇的痛苦——茨威格用极其细腻的笔触，把一个女人一生的隐秘爱恋写得惊心动魄。</p>
                 </div>
             </div>
             <!-- 菊与刀 -->
@@ -3112,58 +3092,44 @@
         </div>
     </div>
 
-    <div id="modal-moshinv" class="modal-overlay" onclick="closeModalOnOverlay(event, 'moshinv')">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('moshinv')">×</button>
-            <div class="modal-header">
-                <img class="modal-cover" src="images/一个陌生女人的来信_封面.webp" alt="封面">
-                <div class="modal-header-info">
-                    <div class="modal-book-title">《一个陌生女人的来信》</div>
-                    <div class="modal-book-meta">
-                        <strong>作者：</strong>[奥]斯特凡·茨威格 著 / 韩耀成 译<br>
-                        <strong>出版社：</strong>上海译文出版社<br>
-                        <strong>类型：</strong>短篇小说 / 心理小说<br>
-                        <strong>读完时间：</strong>2026-08-08
-                    </div>
-                    <div class="modal-tags">
-                        <span class="modal-tag">#文学</span>
-                        <span class="modal-tag">#茨威格</span>
-                        <span class="modal-tag">#短篇小说</span>
-                        <span class="modal-tag">#心理描写</span>
-                        <span class="modal-tag">#爱情</span>
-                    </div>
-                </div>
-            </div>
-
+        <div id="modal-moshinv" class="modal-overlay" onclick="closeModalOnOverlay(event, 'moshinv')">
+        <div class="modal-content" style="--modal-accent:#c83a32;">
+            <button class="modal-close" onclick="closeModal('moshinnv')" aria-label="关闭">&times;</button>
+            <img src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信" class="modal-cover">
             <div class="modal-body">
+                <h2 class="modal-title">一个陌生女人的来信</h2>
+                <p class="modal-meta">[奥] 斯特凡·茨威格 / 上海译文出版社 / 韩耀成译</p>
+                <p class="modal-date">读完 2026-08-08</p>
+
                 <div class="modal-section">
-                    <div class="modal-section-title">一、从"就这？"到被震住</div>
-                    <p>看前几篇短篇的时候，有一些隐隐的困惑——鼎鼎大名的茨威格就这？虽然能感受到他用极其细腻的文字去描写人物的心理活动，但觉得也不过如此。</p>
-                    <p>直到看完《一个陌生女人的来信》这一篇，才真的被<strong>震住了</strong>。</p>
+                    <h3>从"就这？"到被震住</h3>
+                    <p>看前几篇短篇的时候，有一些隐隐的困惑，鼎鼎大名的茨威格就这？虽然能感受到他用极其细腻的文字去描写人物的心理活动，但觉得也不过如此。直到看完《一个陌生女人的来信》这一篇，才真的被震住了。</p>
                 </div>
 
                 <div class="modal-section">
-                    <div class="modal-section-title">二、一个女人一生的隐秘爱恋</div>
-                    <p><strong>少女的情窦初开。</strong>十三岁的女孩第一次注意到邻居作家，那种朦胧的、不求回应的、近乎宗教般的崇拜。茨威格写得太好了——不是写"她喜欢他"，而是写她如何把整个世界的意义都投射到这个男人身上。他的每一个动作、每一本书、每一次经过她的门，都被她用显微镜式的敏感捕捉并赋予神圣的意义。</p>
-                    <p><strong>成年的迷恋。</strong>长大后的重逢（或者说单方面的重逢），她成了他一夜情缘的过客，而他完全不记得她。这种不对等的关系写得让人窒息——她知道一切，他什么都不知道；她付出一生，他连她的名字都没记住。</p>
-                    <p><strong>少妇的痛苦。</strong>怀孕、独自抚养孩子、贫困、出卖身体……所有这些都没有动摇她对那个男人的感情。这不是爱情，这是信仰。而最残忍的是，直到死，她才决定告诉他这一切——而他读完信后，只记得一个模糊的影子。</p>
+                    <h3>一个女人一生的隐秘爱恋</h3>
+                    <p>少女的情窦初开——那个作家邻居是她世界的全部中心，她把每一次偶然的相遇都当成命运的特殊安排；成年的迷恋——她在维也纳的街头与他擦肩而过，他不再认得她，但她依然用整个生命在爱着他；少妇的痛苦——她生下了他的孩子却从未让他知道，最后孩子死了，她也随孩子而去，临终前把这封信寄给了他。</p>
                 </div>
 
                 <div class="modal-section">
-                    <div class="modal-section-title">三、茨威格的写作密码：边缘、极端、危险</div>
-                    <p>茨威格似乎非常喜欢描写<strong>非常边缘的、极端的、危险的爱情和欲望</strong>。不是那种健康、正常、双向奔赴的感情，而是偏执的、自我毁灭式的、几乎病态的情感状态。</p>
-                    <p>通过这种极端感情的描写，他勾勒出的是那个时代的人物的面貌——维也纳末世的颓废感、一战前后欧洲知识分子的精神危机、女性在男权社会中的彻底失语。一个女人可以爱一个男人到死，而这个男人甚至不需要知道她的存在——这就是茨威格笔下的世界，残酷但真实。</p>
+                    <h3>茨威格的写作密码</h3>
+                    <p>茨威格似乎非常喜欢描写一些非常边缘的、极端的、危险的爱情和欲望。通过这种感情的表达来勾勒出那个时代的人物的面貌。他不写正常的爱，他写的是那种病态的、执念的、毁灭性的感情——但正是这种极端，让文字有了穿透力。</p>
                 </div>
 
                 <div class="modal-section">
-                    <div class="modal-section-title">四、心理描写的极致</div>
-                    <p>这篇小说最厉害的地方在于：<strong>它完全是一个女人的内心独白</strong>，从头到尾没有一句对话，全是她在写信。但你能读出她一生的轨迹、情感的变化、命运的残酷。</p>
-                    <p>茨威格对女性心理的把握精准得可怕。不是那种男性视角下的"女人应该怎样"，而是真正进入了一个女人的内心世界——她的骄傲与卑微、她的清醒与自欺、她的绝望与平静。</p>
+                    <h3>心理描写的极致</h3>
+                    <p>全篇是一个女人的一封长信，几乎全是内心独白，没有一句对话。但你能感受到她从13岁到死亡的全部情感轨迹。这不是爱情故事，这是一个人如何用一生去爱另一个人——而对方甚至不知道她的存在。</p>
+                </div>
+
+                <div class="modal-tags">
+                    <span class="tag">#文学</span>
+                    <span class="tag">#茨威格</span>
+                    <span class="tag">#短篇小说</span>
+                    <span class="tag">#心理描写</span>
                 </div>
             </div>
         </div>
     </div>
-
     <div id="modal-juyudao" class="modal-overlay" onclick="closeModalOnOverlay(event, 'juyudao')">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('juyudao')">×</button>
@@ -3869,41 +3835,6 @@
                 }, 80);
             });
         })();
-    
-(function(){
-  var lazyBooks = document.querySelectorAll('.shelf-book[data-lazy]');
-  if (!lazyBooks.length) return;
-
-  // 先保存真实的 --spine-art 到变量中
-  lazyBooks.forEach(function(book){
-    var art = getComputedStyle(book).getPropertyValue('--spine-art');
-    // 从style属性取更可靠
-    var style = book.getAttribute('style');
-    var match = style.match(/--spine-art:url\(['"]?([^'")]+)['"]?\)/);
-    if (match) {
-      book.style.setProperty('--spine-art-real', "url('" + match[1] + "')");
-      book.style.setProperty('--spine-art', 'none');
-    }
-  });
-
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          var book = entry.target;
-          book.classList.add('is-visible');
-          observer.unobserve(book);
-        }
-      });
-    }, { rootMargin: '100px', threshold: 0 });
-
-    lazyBooks.forEach(function(book){ observer.observe(book); });
-  } else {
-    // 不支持 IntersectionObserver 则全部显示
-    lazyBooks.forEach(function(book){ book.classList.add('is-visible'); });
-  }
-})();
-
-</script>
+    </script>
 </body>
 </html>
