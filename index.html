@@ -1000,6 +1000,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《一个陌生女人的来信》读书笔记" data-book-id="moshinv" data-title="一个陌生女人的来信" data-date="读完 2026-08-08" data-cover="images/一个陌生女人的来信_封面.webp" style="--spine-art:url('images/spines/decorations/moshinv.webp');--spine-color:#E8E4DF;--spine-text:#1a1a1a;--spine-line:rgba(26,26,26,0.35);--book-height:190px;--book-width:46px;--hover-width:130px;">
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img class="spine-title-img" src="images/spines/moshinv.webp" alt="一个陌生女人的来信">
+                        <span class="spine-cover" style="background-image: url('images/一个陌生女人的来信_封面.webp');"></span>
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《菊与刀》读书笔记" data-book-id="juyudao" data-title="菊与刀" data-date="读完 2026-08-03" data-cover="images/菊与刀_封面.webp" style="--spine-art:url('images/spines/decorations/juyudao.webp');--spine-color:#F5F0EB;--spine-text:#B8283C;--spine-line:rgba(184,40,60,0.35);--book-height:190px;--book-width:54px;--hover-width:140px;">
                             <span class="spine-art" aria-hidden="true"></span>
                             <img class="spine-title-img" src="images/spines/juyudao.webp" alt="菊与刀">
@@ -1123,6 +1128,25 @@
 
         <div class="books-grid">
 
+            <!-- 一个陌生女人的来信 -->
+            <div class="book-card" onclick="openModal('moshinv')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-08</div>
+                    <div class="book-title">《一个陌生女人的来信》</div>
+                    <div class="book-meta">[奥]斯特凡·茨威格 著 / 上海译文出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#文学</span>
+                        <span class="tag">#茨威格</span>
+                        <span class="tag">#短篇小说</span>
+                        <span class="tag">#心理描写</span>
+                    </div>
+                    <div class="book-summary">少女的情窦初开、成年的迷恋、少妇的痛苦——茨威格用极其细腻的笔触，把一个女人一生的隐秘爱恋写得惊心动魄。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
             <!-- 菊与刀 -->
             <div class="book-card" onclick="openModal('juyudao')">
                 <div class="book-cover-wrapper">
@@ -3084,6 +3108,58 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-moshinv" class="modal-overlay" onclick="closeModalOnOverlay(event, 'moshinv')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('moshinv')">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/一个陌生女人的来信_封面.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《一个陌生女人的来信》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[奥]斯特凡·茨威格 著 / 韩耀成 译<br>
+                        <strong>出版社：</strong>上海译文出版社<br>
+                        <strong>类型：</strong>短篇小说 / 心理小说<br>
+                        <strong>读完时间：</strong>2026-08-08
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#文学</span>
+                        <span class="modal-tag">#茨威格</span>
+                        <span class="modal-tag">#短篇小说</span>
+                        <span class="modal-tag">#心理描写</span>
+                        <span class="modal-tag">#爱情</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">一、从"就这？"到被震住</div>
+                    <p>看前几篇短篇的时候，有一些隐隐的困惑——鼎鼎大名的茨威格就这？虽然能感受到他用极其细腻的文字去描写人物的心理活动，但觉得也不过如此。</p>
+                    <p>直到看完《一个陌生女人的来信》这一篇，才真的被<strong>震住了</strong>。</p>
+                </div>
+
+                <div class="modal-section">
+                    <div class="modal-section-title">二、一个女人一生的隐秘爱恋</div>
+                    <p><strong>少女的情窦初开。</strong>十三岁的女孩第一次注意到邻居作家，那种朦胧的、不求回应的、近乎宗教般的崇拜。茨威格写得太好了——不是写"她喜欢他"，而是写她如何把整个世界的意义都投射到这个男人身上。他的每一个动作、每一本书、每一次经过她的门，都被她用显微镜式的敏感捕捉并赋予神圣的意义。</p>
+                    <p><strong>成年的迷恋。</strong>长大后的重逢（或者说单方面的重逢），她成了他一夜情缘的过客，而他完全不记得她。这种不对等的关系写得让人窒息——她知道一切，他什么都不知道；她付出一生，他连她的名字都没记住。</p>
+                    <p><strong>少妇的痛苦。</strong>怀孕、独自抚养孩子、贫困、出卖身体……所有这些都没有动摇她对那个男人的感情。这不是爱情，这是信仰。而最残忍的是，直到死，她才决定告诉他这一切——而他读完信后，只记得一个模糊的影子。</p>
+                </div>
+
+                <div class="modal-section">
+                    <div class="modal-section-title">三、茨威格的写作密码：边缘、极端、危险</div>
+                    <p>茨威格似乎非常喜欢描写<strong>非常边缘的、极端的、危险的爱情和欲望</strong>。不是那种健康、正常、双向奔赴的感情，而是偏执的、自我毁灭式的、几乎病态的情感状态。</p>
+                    <p>通过这种极端感情的描写，他勾勒出的是那个时代的人物的面貌——维也纳末世的颓废感、一战前后欧洲知识分子的精神危机、女性在男权社会中的彻底失语。一个女人可以爱一个男人到死，而这个男人甚至不需要知道她的存在——这就是茨威格笔下的世界，残酷但真实。</p>
+                </div>
+
+                <div class="modal-section">
+                    <div class="modal-section-title">四、心理描写的极致</div>
+                    <p>这篇小说最厉害的地方在于：<strong>它完全是一个女人的内心独白</strong>，从头到尾没有一句对话，全是她在写信。但你能读出她一生的轨迹、情感的变化、命运的残酷。</p>
+                    <p>茨威格对女性心理的把握精准得可怕。不是那种男性视角下的"女人应该怎样"，而是真正进入了一个女人的内心世界——她的骄傲与卑微、她的清醒与自欺、她的绝望与平静。</p>
+                </div>
             </div>
         </div>
     </div>
