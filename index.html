@@ -1126,20 +1126,44 @@
 
                         <!-- 我们只有10%是人类 -->
             <div class="book-card" onclick="openModal('tenpercent')">
-                <img src="images/tenpercent_cover.webp" alt="我们只有10%是人类" class="book-cover">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/tenpercent_cover.webp" alt="我们只有10%是人类封面">
+                </div>
                 <div class="book-info">
-                    <h3>我们只有10%是人类</h3>
-                    <p class="book-author">[英] 阿兰娜·科伦</p>
-                    <p class="book-summary">21世纪消灭了传染病，却迎来了肥胖、过敏、抑郁症、孤独症等"现代病"——根源可能在于我们体内的微生物和免疫系统。</p>
+                    <div class="finish-date">读完 2026-08-13</div>
+                    <div class="book-title">《我们只有10%是人类》</div>
+                    <div class="book-meta">[英]阿兰娜·科伦 著 / 北京联合出版公司·低音</div>
+                    <div class="book-tags">
+                        <span class="tag">#科普</span>
+                        <span class="tag">#微生物</span>
+                        <span class="tag">#免疫</span>
+                        <span class="tag">#健康</span>
+                    </div>
+                    <div class="book-summary">
+                        21世纪消灭了传染病，却迎来了肥胖、过敏、抑郁症、孤独症等"现代病"——根源可能在于我们体内的微生物和免疫系统。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
                 </div>
             </div>
                         <!-- 一个陌生女人的来信 -->
             <div class="book-card" onclick="openModal('moshinv')">
-                <img src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信" class="book-cover">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信封面">
+                </div>
                 <div class="book-info">
-                    <h3>一个陌生女人的来信</h3>
-                    <p class="book-author">[奥] 斯特凡·茨威格</p>
-                    <p class="book-summary">少女的情窦初开、成年的迷恋、少妇的痛苦——茨威格用极其细腻的笔触，把一个女人一生的隐秘爱恋写得惊心动魄。</p>
+                    <div class="finish-date">读完 2026-08-08</div>
+                    <div class="book-title">《一个陌生女人的来信》</div>
+                    <div class="book-meta">[奥]斯特凡·茨威格 著 / 上海译文出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#文学</span>
+                        <span class="tag">#茨威格</span>
+                        <span class="tag">#短篇小说</span>
+                        <span class="tag">#心理描写</span>
+                    </div>
+                    <div class="book-summary">
+                        少女的情窦初开、成年的迷恋、少妇的痛苦——茨威格用极其细腻的笔触，把一个女人一生的隐秘爱恋写得惊心动魄。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
                 </div>
             </div>
             <!-- 菊与刀 -->
@@ -3108,79 +3132,89 @@
     </div>
 
         <div id="modal-tenpercent" class="modal-overlay" onclick="closeModalOnOverlay(event, 'tenpercent')">
-        <div class="modal-content" style="--modal-accent:#C45A6E;">
-            <button class="modal-close" onclick="closeModal('tenpercent')" aria-label="关闭">&times;</button>
-            <img src="images/tenpercent_cover.webp" alt="我们只有10%是人类" class="modal-cover">
-            <div class="modal-body">
-                <h2 class="modal-title">我们只有10%是人类</h2>
-                <p class="modal-meta">[英] 阿兰娜·科伦 (Alanna Collen) / 北京联合出版公司·低音 / 钟季霖 张尚麟 译</p>
-                <p class="modal-date">读完 2026-08-13</p>
-
-                <div class="modal-section">
-                    <h3>开篇：从传染病到现代病</h3>
-                    <p>严格来说并没有读完，但前序引入确实吸引人——21世纪消灭了传染病后，开始出现了许多"现代病"。这个切入点很好，让人想知道接下来会讲什么。</p>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('tenpercent')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/tenpercent_cover.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《我们只有10%是人类》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[英]阿兰娜·科伦 (Alanna Collen) 著 / 钟季霖 张尚麟 译<br>
+                        <strong>出版社：</strong>北京联合出版公司·低音<br>
+                        <strong>类型：</strong>科普 / 微生物学 / 免疫学<br>
+                        <strong>读完时间：</strong>2026-08-13
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#科普</span>
+                        <span class="modal-tag">#微生物</span>
+                        <span class="modal-tag">#免疫</span>
+                        <span class="modal-tag">#健康</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="modal-section">
-                    <h3>核心论点：微生物+免疫系统</h3>
-                    <p>论述了肥胖、过敏、抑郁症甚至孤独症都和人体肠道里的微生物和免疫系统有关。这个观点本身是有意思的——我们身体里90%的细胞是微生物，只有10%是真正的人类细胞。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">开篇：从传染病到现代病</div>
+                <p>严格来说并没有读完，但前序引入确实吸引人——21世纪消灭了传染病后，开始出现了许多"现代病"。这个切入点很好，让人想知道接下来会讲什么。</p>
+            </div>
 
-                <div class="modal-section">
-                    <h3>阅读体验：中间部分太医学化</h3>
-                    <p>不知道为什么到中间部分，就进入到一种非常医学的、反反复复叙述同一件事情的模式，让人无法专心看下去。可能是专业内容太多，或者叙述方式不够抓人。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">核心论点：微生物+免疫系统</div>
+                <p>论述了肥胖、过敏、抑郁症甚至孤独症都和人体肠道里的微生物和免疫系统有关。这个观点本身是有意思的——我们身体里90%的细胞是微生物，只有10%是真正的人类细胞。</p>
+            </div>
 
-                <div class="modal-section">
-                    <h3>两个值得记住的观点</h3>
-                    <p><strong>关于抗生素：</strong>看完后确实对抗生素很担忧。抗生素在消灭有害细菌的同时，也在改变我们身体内的微生物环境。就像一片森林，为了杀虫喷了毒药，有益的虫也死了，然后生态循环就改变了。</p>
-                    <p><strong>关于免疫系统：</strong>大量现代病都是因为免疫系统太闲导致的。因为没有了传染病可打，它们只能把其他物质当做敌人去攻击——于是过敏、自身免疫疾病就来了。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">阅读体验：中间部分太医学化</div>
+                <p>不知道为什么到中间部分，就进入到一种非常医学的、反反复复叙述同一件事情的模式，让人无法专心看下去。可能是专业内容太多，或者叙述方式不够抓人。</p>
+            </div>
 
-                <div class="modal-tags">
-                    <span class="tag">#科普</span>
-                    <span class="tag">#微生物</span>
-                    <span class="tag">#免疫</span>
-                    <span class="tag">#健康</span>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">两个值得记住的观点</div>
+                <p><strong>关于抗生素：</strong>看完后确实对抗生素很担忧。抗生素在消灭有害细菌的同时，也在改变我们身体内的微生物环境。就像一片森林，为了杀虫喷了毒药，有益的虫也死了，然后生态循环就改变了。</p>
+                <p><strong>关于免疫系统：</strong>大量现代病都是因为免疫系统太闲导致的。因为没有了传染病可打，它们只能把其他物质当做敌人去攻击——于是过敏、自身免疫疾病就来了。</p>
             </div>
         </div>
     </div>
         <div id="modal-moshinv" class="modal-overlay" onclick="closeModalOnOverlay(event, 'moshinv')">
-        <div class="modal-content" style="--modal-accent:#c83a32;">
-            <button class="modal-close" onclick="closeModal('moshinnv')" aria-label="关闭">&times;</button>
-            <img src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信" class="modal-cover">
-            <div class="modal-body">
-                <h2 class="modal-title">一个陌生女人的来信</h2>
-                <p class="modal-meta">[奥] 斯特凡·茨威格 / 上海译文出版社 / 韩耀成译</p>
-                <p class="modal-date">读完 2026-08-08</p>
-
-                <div class="modal-section">
-                    <h3>从"就这？"到被震住</h3>
-                    <p>看前几篇短篇的时候，有一些隐隐的困惑，鼎鼎大名的茨威格就这？虽然能感受到他用极其细腻的文字去描写人物的心理活动，但觉得也不过如此。直到看完《一个陌生女人的来信》这一篇，才真的被震住了。</p>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('moshinv')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/一个陌生女人的来信_封面.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《一个陌生女人的来信》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[奥]斯特凡·茨威格 著 / 韩耀成 译<br>
+                        <strong>出版社：</strong>上海译文出版社<br>
+                        <strong>类型：</strong>文学 / 短篇小说 / 心理描写<br>
+                        <strong>读完时间：</strong>2026-08-08
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#文学</span>
+                        <span class="modal-tag">#茨威格</span>
+                        <span class="modal-tag">#短篇小说</span>
+                        <span class="modal-tag">#心理描写</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="modal-section">
-                    <h3>一个女人一生的隐秘爱恋</h3>
-                    <p>少女的情窦初开——那个作家邻居是她世界的全部中心，她把每一次偶然的相遇都当成命运的特殊安排；成年的迷恋——她在维也纳的街头与他擦肩而过，他不再认得她，但她依然用整个生命在爱着他；少妇的痛苦——她生下了他的孩子却从未让他知道，最后孩子死了，她也随孩子而去，临终前把这封信寄给了他。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">从"就这？"到被震住</div>
+                <p>看前几篇短篇的时候，有一些隐隐的困惑，鼎鼎大名的茨威格就这？虽然能感受到他用极其细腻的文字去描写人物的心理活动，但觉得也不过如此。直到看完《一个陌生女人的来信》这一篇，才真的被震住了。</p>
+            </div>
 
-                <div class="modal-section">
-                    <h3>茨威格的写作密码</h3>
-                    <p>茨威格似乎非常喜欢描写一些非常边缘的、极端的、危险的爱情和欲望。通过这种感情的表达来勾勒出那个时代的人物的面貌。他不写正常的爱，他写的是那种病态的、执念的、毁灭性的感情——但正是这种极端，让文字有了穿透力。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">一个女人一生的隐秘爱恋</div>
+                <p>少女的情窦初开——那个作家邻居是她世界的全部中心，她把每一次偶然的相遇都当成命运的特殊安排；成年的迷恋——她在维也纳的街头与他擦肩而过，他不再认得她，但她依然用整个生命在爱着他；少妇的痛苦——她生下了他的孩子却从未让他知道，最后孩子死了，她也随孩子而去，临终前把这封信寄给了他。</p>
+            </div>
 
-                <div class="modal-section">
-                    <h3>心理描写的极致</h3>
-                    <p>全篇是一个女人的一封长信，几乎全是内心独白，没有一句对话。但你能感受到她从13岁到死亡的全部情感轨迹。这不是爱情故事，这是一个人如何用一生去爱另一个人——而对方甚至不知道她的存在。</p>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">茨威格的写作密码</div>
+                <p>茨威格似乎非常喜欢描写一些非常边缘的、极端的、危险的爱情和欲望。通过这种感情的表达来勾勒出那个时代的人物的面貌。他不写正常的爱，他写的是那种病态的、执念的、毁灭性的感情——但正是这种极端，让文字有了穿透力。</p>
+            </div>
 
-                <div class="modal-tags">
-                    <span class="tag">#文学</span>
-                    <span class="tag">#茨威格</span>
-                    <span class="tag">#短篇小说</span>
-                    <span class="tag">#心理描写</span>
-                </div>
+            <div class="modal-section">
+                <div class="modal-section-title">心理描写的极致</div>
+                <p>全篇是一个女人的一封长信，几乎全是内心独白，没有一句对话。但你能感受到她从13岁到死亡的全部情感轨迹。这不是爱情故事，这是一个人如何用一生去爱另一个人——而对方甚至不知道她的存在。</p>
             </div>
         </div>
     </div>
