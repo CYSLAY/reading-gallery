@@ -991,7 +991,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
-                                        <button class="shelf-book" type="button" aria-label="打开《一个陌生女人的来信》读书笔记" data-book-id="moshinv" data-title="一个陌生女人的来信" data-date="读完 2026-08-08" data-cover="images/一个陌生女人的来信_封面.webp" style="--spine-art:url('images/spines/decorations/moshinv.webp');--spine-color:#C4483A;--spine-text:#F5F0EB;--spine-line:rgba(245,240,235,0.35);--book-height:190px;--book-width:46px;--hover-width:128px;">
+                                        <button class="shelf-book" type="button" aria-label="打开《我们只有10%是人类》读书笔记" data-book-id="tenpercent" data-title="我们只有10%是人类" data-date="读完 2026-08-13" data-cover="images/我们只有10%是人类_封面.webp" style="--spine-art:url('images/spines/decorations/tenpercent.webp');--spine-color:#C45A6E;--spine-text:#2D2D2D;--spine-line:rgba(45,45,45,0.30);--book-height:178px;--book-width:44px;--hover-width:130px;">
+                        <span class="spine-cover" style="background-image:url('images/我们只有10%是人类_封面.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/tenpercent.webp" alt="" class="spine-title-img">
+                    </button>
+                    <button class="shelf-book" type="button" aria-label="打开《一个陌生女人的来信》读书笔记" data-book-id="moshinv" data-title="一个陌生女人的来信" data-date="读完 2026-08-08" data-cover="images/一个陌生女人的来信_封面.webp" style="--spine-art:url('images/spines/decorations/moshinv.webp');--spine-color:#C4483A;--spine-text:#F5F0EB;--spine-line:rgba(245,240,235,0.35);--book-height:190px;--book-width:46px;--hover-width:128px;">
                         <span class="spine-cover" style="background-image:url('images/一个陌生女人的来信_封面.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
                         <img src="images/spines/moshinv.webp" alt="" class="spine-title-img">
@@ -1119,6 +1124,15 @@
 
         <div class="books-grid">
 
+                        <!-- 我们只有10%是人类 -->
+            <div class="book-card" onclick="openModal('tenpercent')">
+                <img src="images/我们只有10%是人类_封面.webp" alt="我们只有10%是人类" class="book-cover">
+                <div class="book-info">
+                    <h3>我们只有10%是人类</h3>
+                    <p class="book-author">[英] 阿兰娜·科伦</p>
+                    <p class="book-summary">21世纪消灭了传染病，却迎来了肥胖、过敏、抑郁症、孤独症等"现代病"——根源可能在于我们体内的微生物和免疫系统。</p>
+                </div>
+            </div>
                         <!-- 一个陌生女人的来信 -->
             <div class="book-card" onclick="openModal('moshinv')">
                 <img src="images/一个陌生女人的来信_封面.webp" alt="一个陌生女人的来信" class="book-cover">
@@ -3093,6 +3107,45 @@
         </div>
     </div>
 
+        <div id="modal-tenpercent" class="modal-overlay" onclick="closeModalOnOverlay(event, 'tenpercent')">
+        <div class="modal-content" style="--modal-accent:#C45A6E;">
+            <button class="modal-close" onclick="closeModal('tenpercent')" aria-label="关闭">&times;</button>
+            <img src="images/我们只有10%是人类_封面.webp" alt="我们只有10%是人类" class="modal-cover">
+            <div class="modal-body">
+                <h2 class="modal-title">我们只有10%是人类</h2>
+                <p class="modal-meta">[英] 阿兰娜·科伦 (Alanna Collen) / 北京联合出版公司·低音 / 钟季霖 张尚麟 译</p>
+                <p class="modal-date">读完 2026-08-13</p>
+
+                <div class="modal-section">
+                    <h3>开篇：从传染病到现代病</h3>
+                    <p>严格来说并没有读完，但前序引入确实吸引人——21世纪消灭了传染病后，开始出现了许多"现代病"。这个切入点很好，让人想知道接下来会讲什么。</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>核心论点：微生物+免疫系统</h3>
+                    <p>论述了肥胖、过敏、抑郁症甚至孤独症都和人体肠道里的微生物和免疫系统有关。这个观点本身是有意思的——我们身体里90%的细胞是微生物，只有10%是真正的人类细胞。</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>阅读体验：中间部分太医学化</h3>
+                    <p>不知道为什么到中间部分，就进入到一种非常医学的、反反复复叙述同一件事情的模式，让人无法专心看下去。可能是专业内容太多，或者叙述方式不够抓人。</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>两个值得记住的观点</h3>
+                    <p><strong>关于抗生素：</strong>看完后确实对抗生素很担忧。抗生素在消灭有害细菌的同时，也在改变我们身体内的微生物环境。就像一片森林，为了杀虫喷了毒药，有益的虫也死了，然后生态循环就改变了。</p>
+                    <p><strong>关于免疫系统：</strong>大量现代病都是因为免疫系统太闲导致的。因为没有了传染病可打，它们只能把其他物质当做敌人去攻击——于是过敏、自身免疫疾病就来了。</p>
+                </div>
+
+                <div class="modal-tags">
+                    <span class="tag">#科普</span>
+                    <span class="tag">#微生物</span>
+                    <span class="tag">#免疫</span>
+                    <span class="tag">#健康</span>
+                </div>
+            </div>
+        </div>
+    </div>
         <div id="modal-moshinv" class="modal-overlay" onclick="closeModalOnOverlay(event, 'moshinv')">
         <div class="modal-content" style="--modal-accent:#c83a32;">
             <button class="modal-close" onclick="closeModal('moshinnv')" aria-label="关闭">&times;</button>
