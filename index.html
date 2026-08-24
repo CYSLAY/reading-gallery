@@ -3929,6 +3929,19 @@
                             clone.addEventListener('click', function() {
                                 openModal(clone.dataset.bookId);
                             });
+                            /* 克隆书脊不继承原节点的事件监听；补齐与第一行完全相同的悬浮封面定位。 */
+                            clone.addEventListener('mouseenter', function() {
+                                var cover = clone.querySelector('.spine-cover');
+                                if (!cover) return;
+                                var bookRect = clone.getBoundingClientRect();
+                                var coverW = bookRect.height * 0.66 + 12;
+                                var spaceRight = window.innerWidth - bookRect.right;
+                                if (spaceRight < coverW + 8) {
+                                    cover.classList.add('cover-left');
+                                } else {
+                                    cover.classList.remove('cover-left');
+                                }
+                            });
                             row.appendChild(clone);
                         });
                         wrap.appendChild(row);
