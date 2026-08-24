@@ -991,7 +991,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
-                                        <button class="shelf-book" type="button" aria-label="打开《我们只有10%是人类》读书笔记" data-book-id="tenpercent" data-title="我们只有10%是人类" data-date="读完 2026-08-13" data-cover="images/tenpercent_cover.webp" style="--spine-art:url('images/spines/decorations/tenpercent.webp');--spine-color:#D4E8F0;--spine-text:#232323;--spine-line:rgba(35,35,35,0.25);--book-height:176px;--book-width:40px;--hover-width:124px;">
+                    <button class="shelf-book" type="button" aria-label="打开《也许你该找个人聊聊》读书笔记" data-book-id="talksomeone" data-title="也许你该找个人聊聊" data-date="读完 2026-08-24" data-cover="images/talksomeone_cover_20260824.webp" style="--spine-art:url('images/spines/decorations/talksomeone.webp');--spine-color:#A9D7EF;--spine-text:#111D2A;--spine-line:rgba(17,29,42,0.30);--book-height:206px;--book-width:56px;--hover-width:144px;">
+                        <span class="spine-cover" style="background-image:url('images/talksomeone_cover_20260824.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/talksomeone.webp" alt="也许你该找个人聊聊" class="spine-title-img">
+                    </button>
+                    <button class="shelf-book" type="button" aria-label="打开《我们只有10%是人类》读书笔记" data-book-id="tenpercent" data-title="我们只有10%是人类" data-date="读完 2026-08-13" data-cover="images/tenpercent_cover.webp" style="--spine-art:url('images/spines/decorations/tenpercent.webp');--spine-color:#D4E8F0;--spine-text:#232323;--spine-line:rgba(35,35,35,0.25);--book-height:176px;--book-width:40px;--hover-width:124px;">
                         <span class="spine-cover" style="background-image:url('images/tenpercent_cover.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
                         <img src="images/spines/tenpercent.webp" alt="" class="spine-title-img">
@@ -1124,7 +1129,29 @@
 
         <div class="books-grid">
 
-                        <!-- 我们只有10%是人类 -->
+            <!-- 也许你该找个人聊聊 -->
+            <div class="book-card" onclick="openModal('talksomeone')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/talksomeone_cover_20260824.webp" alt="也许你该找个人聊聊封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-24</div>
+                    <div class="book-title">《也许你该找个人聊聊》</div>
+                    <div class="book-meta">[美]洛莉·戈特利布 著 / 上海文化出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#心理咨询</span>
+                        <span class="tag">#自我觉察</span>
+                        <span class="tag">#情绪</span>
+                        <span class="tag">#非虚构</span>
+                    </div>
+                    <div class="book-summary">
+                        一位心理咨询师，把来访者与她自己的治疗写成了有起承转合的群像故事；它让人看到感受、痛苦与改变，都必须在真实生活里被重新经历。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
+
+            <!-- 我们只有10%是人类 -->
             <div class="book-card" onclick="openModal('tenpercent')">
                 <div class="book-cover-wrapper">
                     <img class="book-cover" src="images/tenpercent_cover.webp" alt="我们只有10%是人类封面">
@@ -3127,6 +3154,71 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+        <div id="modal-talksomeone" class="modal-overlay" onclick="closeModalOnOverlay(event, 'talksomeone')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('talksomeone')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/talksomeone_cover_20260824.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《也许你该找个人聊聊》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[美]洛莉·戈特利布（Lori Gottlieb）著 / 张含笑 译<br>
+                        <strong>出版社：</strong>上海文化出版社<br>
+                        <strong>类型：</strong>心理咨询 / 非虚构 / 自我觉察<br>
+                        <strong>读完时间：</strong>2026-08-24
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#心理咨询</span>
+                        <span class="modal-tag">#自我觉察</span>
+                        <span class="modal-tag">#情绪</span>
+                        <span class="modal-tag">#非虚构</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一本会让人追着读下去的心理咨询书</div>
+                <p>这是近期看过的最好的一本书之一，也大为震撼。一位心理咨询师竟然能把故事讲得这么好：阅读时像在一集一集地看美剧情景剧，有人物、有关系，也有清晰的起承转合。来访者和咨询师都不是功能性的角色，而是有血有肉的人。</p>
+                <p>会为约翰的伤子之痛流泪，会为朱莉的讣告感动，也会在作者最后结束自己的治疗时感到欣慰。因为看得过于专注，反而没有记太多笔记，但下面几句话和观点被留下来了。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">“你会尝试躲藏，而我会找到你”</div>
+                <p>心理治疗就是：你会尝试躲藏，而我会找到你，到那个时候一切都会好起来。</p>
+                <p>人会为自己找借口，将行为合理化；即使是自愿来做心理咨询，也会在潜意识中不断躲闪。心理咨询师的工作，是透过这些潜意识的躲闪，发现真实的你。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">麻木，恰恰可能来自太多感受</div>
+                <p>麻木不是感受的缺失，而是被太多感受吞噬的情况下的反应。</p>
+                <p>这很反直觉。原本会以为麻木是一种“钝感”或“冷漠”，但恰恰可能是因为过于敏感，感受太多，人才进入麻木。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">练习不是比赛</div>
+                <p>心理治疗就像在家里做投篮练习，但总得在真正的比赛里试试身手。</p>
+                <p>这是非常恰当的比喻，也突然理解了为什么嘉铭很多时候都要逼周总或逼我去尝试做一些事情：不上场，就不知道这个篮到底能不能投进。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">痛苦不该被比较</div>
+                <p>痛苦并没有高低等级之分。人的感受就是感受，你的痛苦就是你的痛苦，不能被批判，也不能被比较。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">没有人会来救你</div>
+                <p>我依旧坚信每个人都被困在自己的童年里，而那个小孩子，没有人能够再去救他了。能做的，是去看到现在的自己。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">那句让人泪崩的讣告</div>
+                <p>全书最让我泪崩的一句话，是葬礼上的讣告：</p>
+                <p><strong>“她活着的每一天都被深深爱着。她真的很幸福。”</strong></p>
+                <p>我也希望如此。</p>
             </div>
         </div>
     </div>
