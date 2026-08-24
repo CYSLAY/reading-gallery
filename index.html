@@ -581,6 +581,13 @@
             transform: translateY(-6px) scale(1.04);
             z-index: 50;
         }
+        /* 全年书架第二行保留悬浮封面，但不展开或放大书脊本身。 */
+        .annual-row .shelf-book:hover,
+        .annual-row .shelf-book:focus-visible {
+            width: var(--book-width, 54px);
+            transform: translateY(-8px);
+            z-index: 50;
+        }
         .shelf-book::before {
             content: "";
             position: absolute;
@@ -3187,38 +3194,35 @@
             </div>
 
             <div class="modal-section">
-                <div class="modal-section-title">“你会尝试躲藏，而我会找到你”</div>
-                <p>心理治疗就是：你会尝试躲藏，而我会找到你，到那个时候一切都会好起来。</p>
+                <div class="modal-section-title">心理治疗就是，你会尝试躲藏，而我会找到你，到那个时候一切都会好起来。</div>
                 <p>人会为自己找借口，将行为合理化；即使是自愿来做心理咨询，也会在潜意识中不断躲闪。心理咨询师的工作，是透过这些潜意识的躲闪，发现真实的你。</p>
             </div>
 
             <div class="modal-section">
-                <div class="modal-section-title">麻木，恰恰可能来自太多感受</div>
-                <p>麻木不是感受的缺失，而是被太多感受吞噬的情况下的反应。</p>
+                <div class="modal-section-title">麻木不是感受的缺失，而是被太多感受吞噬的情况下的反应。</div>
                 <p>这很反直觉。原本会以为麻木是一种“钝感”或“冷漠”，但恰恰可能是因为过于敏感，感受太多，人才进入麻木。</p>
             </div>
 
             <div class="modal-section">
-                <div class="modal-section-title">练习不是比赛</div>
-                <p>心理治疗就像在家里做投篮练习，但总得在真正的比赛里试试身手。</p>
+                <div class="modal-section-title">心理治疗就像在家里做投篮练习，但总得到真正的比赛试试身手。</div>
                 <p>这是非常恰当的比喻，也突然理解了为什么嘉铭很多时候都要逼周总或逼我去尝试做一些事情：不上场，就不知道这个篮到底能不能投进。</p>
             </div>
 
             <div class="modal-section">
-                <div class="modal-section-title">痛苦不该被比较</div>
-                <p>痛苦并没有高低等级之分。人的感受就是感受，你的痛苦就是你的痛苦，不能被批判，也不能被比较。</p>
+                <div class="modal-section-title">痛苦并没有高低等级之分。</div>
+                <p>人的感受就是感受，你的痛苦就是你的痛苦，不能被批判，也不能被比较。</p>
             </div>
 
             <div class="modal-section">
-                <div class="modal-section-title">没有人会来救你</div>
+                <div class="modal-section-title">没有人会来救你。</div>
                 <p>我依旧坚信每个人都被困在自己的童年里，而那个小孩子，没有人能够再去救他了。能做的，是去看到现在的自己。</p>
             </div>
 
             <div class="modal-section">
                 <div class="modal-section-title">那句让人泪崩的讣告</div>
                 <p>全书最让我泪崩的一句话，是葬礼上的讣告：</p>
-                <p><strong>“她活着的每一天都被深深爱着。她真的很幸福。”</strong></p>
-                <p>我也希望如此。</p>
+                <p><strong>“她活着的每一天都被深深爱着。”</strong></p>
+                <p>她真的很幸福。我也希望如此。</p>
             </div>
         </div>
     </div>
