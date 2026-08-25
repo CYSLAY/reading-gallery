@@ -998,6 +998,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《资产配置行动指南》读书笔记" data-book-id="assetallocation" data-title="资产配置行动指南" data-date="读完 2026-08-25" data-cover="images/assetallocation_cover_20260825.webp" style="--spine-art:url('images/spines/decorations/assetallocation.webp');--spine-color:#F6F3ED;--spine-text:#B47B42;--spine-line:rgba(180,123,66,0.38);--book-height:172px;--book-width:52px;--hover-width:140px;">
+                        <span class="spine-cover" style="background-image:url('images/assetallocation_cover_20260825.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/assetallocation.webp" alt="资产配置行动指南" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《也许你该找个人聊聊》读书笔记" data-book-id="talksomeone" data-title="也许你该找个人聊聊" data-date="读完 2026-08-24" data-cover="images/talksomeone_cover_20260824.webp" style="--spine-art:url('images/spines/decorations/talksomeone.webp');--spine-color:#A9D7EF;--spine-text:#111D2A;--spine-line:rgba(17,29,42,0.30);--book-height:206px;--book-width:56px;--hover-width:144px;">
                         <span class="spine-cover" style="background-image:url('images/talksomeone_cover_20260824.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1135,6 +1140,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 资产配置行动指南 -->
+            <div class="book-card" onclick="openModal('assetallocation')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/assetallocation_cover_20260825.webp" alt="资产配置行动指南封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-25</div>
+                    <div class="book-title">《资产配置行动指南》</div>
+                    <div class="book-meta">大卫翁 著 / 中信出版集团</div>
+                    <div class="book-tags">
+                        <span class="tag">#资产配置</span>
+                        <span class="tag">#行为金融</span>
+                        <span class="tag">#长期投资</span>
+                        <span class="tag">#投资纪律</span>
+                    </div>
+                    <div class="book-summary">
+                        一本预期之内的畅销书。真正留下来的不是配置公式，而是几条约束人性的纪律：少看、少动、长期持有；别在情绪最热时追入；把流动性与不确定性看成普通人可以利用的条件。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 也许你该找个人聊聊 -->
             <div class="book-card" onclick="openModal('talksomeone')">
@@ -3161,6 +3188,83 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-assetallocation" class="modal-overlay" onclick="closeModalOnOverlay(event, 'assetallocation')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('assetallocation')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/assetallocation_cover_20260825.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《资产配置行动指南》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>大卫翁 著<br>
+                        <strong>出版社：</strong>中信出版集团<br>
+                        <strong>ISBN：</strong>9787521785500<br>
+                        <strong>类型：</strong>资产配置 / 个人理财 / 行为金融<br>
+                        <strong>读完时间：</strong>2026-08-25
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#资产配置</span>
+                        <span class="modal-tag">#行为金融</span>
+                        <span class="modal-tag">#长期投资</span>
+                        <span class="modal-tag">#投资纪律</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一本预期之内的畅销书</div>
+                <p>属于一本预期之内的畅销书类型。现在看这种书，预期已经不高：只要最后能记住一两个真正有用的点，就算不错了。</p>
+                <p>这本书没有带来一套全新的资产配置体系，但关于投资行为与普通人优势的几处提醒，确实值得留下。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、收益时求确定，亏损时赌概率</div>
+                <p>书里用抽奖和车祸赔偿的案例，讲了一个很反直觉的人性：<strong>面对收益时，人会回避不确定性，希望尽快落袋为安；面对损失时，人反而愿意押注那个小概率的翻盘机会。</strong></p>
+                <p>放到股市里，结果就是不断卖出已经证明自己的优质资产，却把持续走坏的劣质资产留在手里，期待它有一天涨回来。久而久之，小赚被提前截断，大亏却被完整保留。</p>
+                <p>要靠意志力长期对抗这种本能很难。更现实的办法，是<strong>减少接触、减少判断、减少操作</strong>，尽量不给情绪接管账户的机会。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、如果不想持有一年，就不要持有一天</div>
+                <p>“如果你不想拿一只股票一年，那就不要拿它一天。”</p>
+                <p>这句话不是要求无条件死守，而是在买入前逼自己回答：我到底是在持有一项能够长期创造价值的资产，还是只想押一次短期价格波动？如果持有理由经不起一年的检验，一天的持有大概率也只是投机。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、牺牲流动性，可能是普通人提高收益的方式</div>
+                <p>对工作和现金流相对稳定的普通人来说，在留足应急资金的前提下，<strong>牺牲一部分流动性，可能是提升长期收益更可行的方式</strong>。因为流动性越强，随时交易的诱惑也越大；适度的锁定，反而能强迫自己少操作、持有得更久。</p>
+                <p>我记住的不是“流动性越差越好”，而是不要为根本用不到的即时流动性持续付费。资金期限要和资产期限匹配。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">四、满眼都是新能源时，为什么不该追着买 ETF</div>
+                <p>当市场里到处都是新能源的讨论、情绪和故事时，机构很可能早已持有足够多的筹码，正在等待情绪最热、估值最高的阶段卖出。</p>
+                <p>问题不一定是新能源不好，而是<strong>一个所有人都知道的好故事，往往已经被价格提前反映</strong>。在共识最拥挤的时候追进去，买到的可能不是行业的未来，而是别人兑现未来的价格。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">五、普通人的机会，可能藏在不确定性里</div>
+                <p>书中一个有意思的判断是：普通人应该寻找带有不确定性的市场，因为机构讨厌不确定性。机构受到期限、考核、风控和赎回压力约束，很难长时间等待一个尚未形成共识的结果；普通人如果没有这些约束，反而可能拥有时间上的优势。</p>
+                <p>但这里的“不确定性”不能等同于盲目下注。真正值得承担的，是<strong>可以研究、可以分散、即使判断错误也不会造成永久性损失的不确定性</strong>。目前历史正在走向下一个巨变点，巨大的不确定性既意味着风险，也意味着需要认真寻找的机会。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">六、最后真正记住的东西</div>
+                <div class="modal-quote">投资未必需要不断做出正确动作，更重要的是减少那些由恐惧、贪婪和市场噪音驱动的错误动作。</div>
+                <p>对普通人来说，优势可能不在预测得更准，而在于没有短期考核、可以选择更长的持有期限，也可以通过减少操作，把人性的破坏降到最低。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">后续需要认真研究的三个问题</div>
+                <ol style="margin: 12px 0; padding-left: 22px; line-height: 1.85;">
+                    <li><strong>黄金的投资逻辑和目前趋势是什么？</strong>它在组合里究竟承担抗通胀、避险还是分散风险的角色？</li>
+                    <li><strong>最好的定投标的是什么？</strong>需要先明确投资期限、风险承受力和目标，再比较宽基指数、债券与黄金等不同工具。</li>
+                    <li><strong>什么股票分红多？</strong>除了股息率，还要研究分红的持续性、现金流质量和企业是否在透支未来。</li>
+                </ol>
             </div>
         </div>
     </div>
