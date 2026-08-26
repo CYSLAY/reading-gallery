@@ -474,6 +474,9 @@
             border-color: #c0c0c0;
             outline: none;
         }
+        .annual-toggle[hidden] {
+            display: none !important;
+        }
         .annual-shelf {
             display: none;
             flex-direction: column;
@@ -4025,11 +4028,12 @@
             /* 视图联动：「全部」视图才显示展开按钮和 20 本限制；
              * 选具体月份时隐藏按钮、解除限制（该月的书全部显示）、强制收起第二行 */
             function syncAnnualControls() {
-                if (isAllPeriod()) {
-                    toggleBtn.hidden = false;
+                var allPeriod = isAllPeriod();
+                toggleBtn.hidden = !allPeriod;
+                toggleBtn.setAttribute('aria-expanded', allPeriod && expanded ? 'true' : 'false');
+                if (allPeriod) {
                     if (!expanded) limitShelfToLatest();
                 } else {
-                    toggleBtn.hidden = true;
                     /* 立即收起（无动画，避免与月份切换动画叠加） */
                     if (expanded) {
                         expanded = false;
@@ -4141,8 +4145,10 @@
 
             /* 用 class 切换显隐（替代 hidden 属性，更可靠） */
             function setExpanded(state) {
+                if (state && !isAllPeriod()) return;
                 if (expanded === state) return; /* 防重复调用 */
                 expanded = state;
+                toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 
                 if (expanded) {
                     /* 不隐藏单排书架：第一行保持不动，只在其下方丝滑展开第二行（溢出的书） */
