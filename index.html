@@ -998,6 +998,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《太白金星有点烦》读书笔记" data-book-id="taibai" data-title="太白金星有点烦" data-date="读完 2026-08-26" data-cover="images/taibai_cover_20260826.webp" style="--spine-art:url('images/spines/decorations/taibai.webp');--spine-color:#F5F1E8;--spine-text:#A87516;--spine-line:rgba(168,117,22,0.35);--book-height:172px;--book-width:44px;--hover-width:132px;">
+                        <span class="spine-cover" style="background-image:url('images/taibai_cover_20260826.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/taibai.webp" alt="太白金星有点烦" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《资产配置行动指南》读书笔记" data-book-id="assetallocation" data-title="资产配置行动指南" data-date="读完 2026-08-25" data-cover="images/assetallocation_cover_20260825.webp" style="--spine-art:url('images/spines/decorations/assetallocation.webp');--spine-color:#F6F3ED;--spine-text:#B47B42;--spine-line:rgba(180,123,66,0.38);--book-height:172px;--book-width:52px;--hover-width:140px;">
                         <span class="spine-cover" style="background-image:url('images/assetallocation_cover_20260825.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1140,6 +1145,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 太白金星有点烦 -->
+            <div class="book-card" onclick="openModal('taibai')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/taibai_cover_20260826.webp" alt="太白金星有点烦封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-26</div>
+                    <div class="book-title">《太白金星有点烦》</div>
+                    <div class="book-meta">马伯庸 著 / 湖南文艺出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#小说</span>
+                        <span class="tag">#西游新解</span>
+                        <span class="tag">#职场寓言</span>
+                        <span class="tag">#心性修行</span>
+                    </div>
+                    <div class="book-summary">
+                        把西天取经写成一场层层协调、处处背锅的大型项目，读来爽快；真正留下的，是李长庚在因果、人情与评价中守住己念的那次渡劫。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 资产配置行动指南 -->
             <div class="book-card" onclick="openModal('assetallocation')">
@@ -3188,6 +3215,58 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-taibai" class="modal-overlay" onclick="closeModalOnOverlay(event, 'taibai')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('taibai')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/taibai_cover_20260826.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《太白金星有点烦》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>马伯庸 著<br>
+                        <strong>出版社：</strong>湖南文艺出版社<br>
+                        <strong>出版时间：</strong>2023年6月<br>
+                        <strong>ISBN：</strong>9787572610912<br>
+                        <strong>类型：</strong>小说 / 西游新解 / 职场寓言<br>
+                        <strong>读完时间：</strong>2026-08-26
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#小说</span>
+                        <span class="modal-tag">#西游新解</span>
+                        <span class="modal-tag">#职场寓言</span>
+                        <span class="modal-tag">#心性修行</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、当作娱乐读，确实是一篇爽文</div>
+                <p>一直听说这本书，这次就当作娱乐，快速看完。读起来确实很顺，也确实挺“爽文”：情节推进快，笑点密集，熟悉《西游记》的人物与桥段被重新拆解成一套现代职场逻辑，几乎没有阅读负担。</p>
+                <p>它没有重构我对《西游记》的理解，但作为一次轻松的改写，完成度是够的。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、熟悉的西游权谋，换了一个执行视角</div>
+                <p>过往从 B 站 UP 主渤海小吏等人的内容里，已经听过不少关于《西游记》权谋斗争的解读。这本书的底层逻辑与那些解读并没有本质差别：取经从来不只是一场降妖除魔，而是各方势力、利益与因果共同推动的一场大戏。</p>
+                <p>真正带来新鲜感的，是马伯庸把视角放在李长庚这个“基层公务员”身上。九九八十一难不再只是神话奇观，而变成了一项层层协调、处处背锅的大型项目：上面有考核，横向有协作，各路神仙有人情，沿途妖怪有诉求，任何一环出了问题，最后都要由执行者想办法兜住。</p>
+                <p>于是这场“渡劫”被解构得更戏谑，也更贴近现代人的职场经验。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、超脱因果，不是不沾因果，而是只存己念</div>
+                <p>全书最后落到一句真正有分量的话：<strong>超脱因果，不是不沾因果，而是只存己念；太上忘情，也不是无情无欲，而是唯修自身。</strong></p>
+                <p>人不可能真正脱离因果、世俗与人情。所谓超脱，不是把一切关系切断，也不是让自己变得冷漠，而是在身处其中时，仍然知道哪些念头属于自己，哪些选择只是被外界推着做出的。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">四、李长庚修成金仙，修的是自己的心</div>
+                <p>李长庚最终得以修成金仙，本质上讨论的不是权谋的胜负，也不是项目完成得多漂亮，而是个人心性的磨炼。</p>
+                <p>真正难的，是在因果世俗和人情冷暖中，仍然<strong>不受裹挟，不图回报，不畏评价</strong>。不是避开所有牵扯，而是身在牵扯之中，依旧按照自己认定的方向去做。</p>
+                <div class="modal-quote">真正的修行，不是躲开因果，而是身在因果之中，仍只存己念。</div>
             </div>
         </div>
     </div>
