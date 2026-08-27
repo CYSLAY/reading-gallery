@@ -1001,6 +1001,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《长安的荔枝》读书笔记" data-book-id="changanlitchi" data-title="长安的荔枝" data-date="读完 2026-08-27" data-cover="images/changanlitchi_cover_20260827.webp" style="--spine-art:url('images/spines/decorations/changanlitchi.webp');--spine-color:#F5F2E9;--spine-text:#A66B2A;--spine-line:rgba(166,107,42,0.36);--book-height:190px;--book-width:34px;--hover-width:122px;">
+                        <span class="spine-cover" style="background-image:url('images/changanlitchi_cover_20260827.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/changanlitchi.webp" alt="长安的荔枝" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《太白金星有点烦》读书笔记" data-book-id="taibai" data-title="太白金星有点烦" data-date="读完 2026-08-26" data-cover="images/taibai_cover_20260826.webp" style="--spine-art:url('images/spines/decorations/taibai.webp');--spine-color:#F5F1E8;--spine-text:#A87516;--spine-line:rgba(168,117,22,0.35);--book-height:172px;--book-width:36px;--hover-width:124px;">
                         <span class="spine-cover" style="background-image:url('images/taibai_cover_20260826.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1148,6 +1153,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 长安的荔枝 -->
+            <div class="book-card" onclick="openModal('changanlitchi')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/changanlitchi_cover_20260827.webp" alt="长安的荔枝封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-27</div>
+                    <div class="book-title">《长安的荔枝》</div>
+                    <div class="book-meta">马伯庸 著 / 湖南文艺出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#小说</span>
+                        <span class="tag">#历史短小说</span>
+                        <span class="tag">#马伯庸</span>
+                        <span class="tag">#文字画面</span>
+                    </div>
+                    <div class="book-summary">
+                        三个小时读完。每天看一本这样的小说挺惬意，也不得不感慨马伯庸文字里的画面感。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 太白金星有点烦 -->
             <div class="book-card" onclick="openModal('taibai')">
@@ -3218,6 +3245,38 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-changanlitchi" class="modal-overlay" onclick="closeModalOnOverlay(event, 'changanlitchi')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('changanlitchi')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/changanlitchi_cover_20260827.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《长安的荔枝》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>马伯庸 著<br>
+                        <strong>出版社：</strong>湖南文艺出版社<br>
+                        <strong>出版时间：</strong>2022年10月<br>
+                        <strong>ISBN：</strong>9787572608582<br>
+                        <strong>类型：</strong>历史短小说<br>
+                        <strong>读完时间：</strong>2026-08-27
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#小说</span>
+                        <span class="modal-tag">#历史短小说</span>
+                        <span class="modal-tag">#马伯庸</span>
+                        <span class="modal-tag">#文字画面</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三个小时读完的惬意</div>
+                <p>三个小时读完。每天看一本这种类型的小说，还是挺惬意的。</p>
+                <p>也不得不感慨，马伯庸的文字画面感确实太强了。</p>
             </div>
         </div>
     </div>
