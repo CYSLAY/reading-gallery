@@ -1001,6 +1001,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《流浪地球》读书笔记" data-book-id="wanderingearth" data-title="流浪地球" data-date="读完 2026-08-31" data-cover="images/wanderingearth_cover_20260831.webp" style="--spine-art:url('images/spines/decorations/wanderingearth.webp');--spine-color:#17142F;--spine-text:#ECE9E6;--spine-line:rgba(236,233,230,0.36);--book-height:190px;--book-width:42px;--hover-width:130px;">
+                        <span class="spine-cover" style="background-image:url('images/wanderingearth_cover_20260831.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/wanderingearth.webp" alt="流浪地球" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《天生有罪》读书笔记" data-book-id="bornacrime" data-title="天生有罪" data-date="读完 2026-08-30" data-cover="images/bornacrime_cover_20260830.webp" style="--spine-art:url('images/spines/decorations/bornacrime.webp');--spine-color:#0B67A8;--spine-text:#F7F4E5;--spine-line:rgba(247,244,229,0.36);--book-height:172px;--book-width:42px;--hover-width:130px;">
                         <span class="spine-cover" style="background-image:url('images/bornacrime_cover_20260830.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1158,6 +1163,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 流浪地球 -->
+            <div class="book-card" onclick="openModal('wanderingearth')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/wanderingearth_cover_20260831.webp" alt="流浪地球封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-31</div>
+                    <div class="book-title">《流浪地球》</div>
+                    <div class="book-meta">刘慈欣 著 / 长江文艺出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#科幻小说</span>
+                        <span class="tag">#世界观</span>
+                        <span class="tag">#影视改编</span>
+                        <span class="tag">#史诗与孤独</span>
+                    </div>
+                    <div class="book-summary">
+                        原著更像一份简短的世界观设定，电影几乎完成了全部情节延展；真正打动我的，是“流浪地球”四个字里的史诗感和孤独感。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 天生有罪 -->
             <div class="book-card" onclick="openModal('bornacrime')">
@@ -3272,6 +3299,48 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-wanderingearth" class="modal-overlay" onclick="closeModalOnOverlay(event, 'wanderingearth')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('wanderingearth')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/wanderingearth_cover_20260831.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《流浪地球》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>刘慈欣 著<br>
+                        <strong>出版社：</strong>长江文艺出版社<br>
+                        <strong>出版时间：</strong>2017年5月（纪念珍藏版）<br>
+                        <strong>ISBN：</strong>9787535485663<br>
+                        <strong>类型：</strong>科幻小说 / 影视改编<br>
+                        <strong>读完时间：</strong>2026-08-31
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#科幻小说</span>
+                        <span class="modal-tag">#世界观</span>
+                        <span class="modal-tag">#影视改编</span>
+                        <span class="modal-tag">#史诗与孤独</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、比想象中更短的原著</div>
+                <p>没想到原著这么短，基本上只写了背景设定：太阳氦闪与红巨星危机、全球动力推进器、地下城，以及流浪地球计划。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、电影几乎完成了全部情节延展</div>
+                <p>原著在情节上，似乎想表达地球派与飞船派之间的斗争，但也只是浅浅带过。感情线里日本姑娘加代子的出现意义不明，显得有些多余。</p>
+                <p>相比之下，电影拍出来的史诗感更强。真正看完原著才知道，电影是在原世界观设定的基础上，对几乎全部内容进行了延展。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、“流浪地球”四个字</div>
+                <p>对我来说，“流浪地球”这四个字本身就具有非常强的情感张力。我喜欢它所承载的史诗感和孤独感。</p>
             </div>
         </div>
     </div>
