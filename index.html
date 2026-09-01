@@ -1001,6 +1001,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《天生有罪》读书笔记" data-book-id="bornacrime" data-title="天生有罪" data-date="读完 2026-08-30" data-cover="images/bornacrime_cover_20260830.webp" style="--spine-art:url('images/spines/decorations/bornacrime.webp');--spine-color:#0B67A8;--spine-text:#F7F4E5;--spine-line:rgba(247,244,229,0.36);--book-height:172px;--book-width:42px;--hover-width:130px;">
+                        <span class="spine-cover" style="background-image:url('images/bornacrime_cover_20260830.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/bornacrime.webp" alt="天生有罪" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《长安的荔枝》读书笔记" data-book-id="changanlitchi" data-title="长安的荔枝" data-date="读完 2026-08-27" data-cover="images/changanlitchi_cover_20260827.webp" style="--spine-art:url('images/spines/decorations/changanlitchi.webp');--spine-color:#F5F2E9;--spine-text:#A66B2A;--spine-line:rgba(166,107,42,0.36);--book-height:172px;--book-width:34px;--hover-width:122px;">
                         <span class="spine-cover" style="background-image:url('images/changanlitchi_cover_20260827.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1153,6 +1158,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 天生有罪 -->
+            <div class="book-card" onclick="openModal('bornacrime')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/bornacrime_cover_20260830.webp" alt="天生有罪封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-08-30</div>
+                    <div class="book-title">《天生有罪》</div>
+                    <div class="book-meta">[南非] 特雷弗·诺亚 著 / 董帅 译 / 北京联合出版公司</div>
+                    <div class="book-tags">
+                        <span class="tag">#回忆录</span>
+                        <span class="tag">#南非</span>
+                        <span class="tag">#种族隔离</span>
+                        <span class="tag">#母亲</span>
+                    </div>
+                    <div class="book-summary">
+                        一个“天生有罪”的混血孩子，靠幽默和变色龙般的适应力融入不同人群；真正影响他一生的，是母亲的善良、勇敢、虔诚和对自由的追逐。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 长安的荔枝 -->
             <div class="book-card" onclick="openModal('changanlitchi')">
@@ -3245,6 +3272,53 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-bornacrime" class="modal-overlay" onclick="closeModalOnOverlay(event, 'bornacrime')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('bornacrime')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/bornacrime_cover_20260830.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《天生有罪》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[南非] 特雷弗·诺亚 著 / 董帅 译<br>
+                        <strong>出版社：</strong>北京联合出版公司<br>
+                        <strong>出版时间：</strong>2026年5月（十周年纪念版）<br>
+                        <strong>ISBN：</strong>9787559614056<br>
+                        <strong>类型：</strong>回忆录 / 南非 / 种族隔离<br>
+                        <strong>读完时间：</strong>2026-08-30
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#回忆录</span>
+                        <span class="modal-tag">#南非</span>
+                        <span class="modal-tag">#种族隔离</span>
+                        <span class="modal-tag">#母亲</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、一本有吸引力，但没有超出推荐的传记</div>
+                <p>原本我不太喜欢看传记类的书，但这本书的内容确实吸引我。只是读完后，仍觉得远没有朋友推荐时说得那么好看。如果是女性读者，或许会更容易被书中母亲展现出的精神所鼓舞。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、幽默的文字与斑驳的人生</div>
+                <p>吸引我的，一方面是特雷弗·诺亚幽默的文字，另一方面是他充满斑驳色彩的人生。一个白人与黑人混血的孩子，出生在种族隔离时代的南非，本身就是一件极其传奇的事。</p>
+                <p>我佩服他母亲的勇气。她的善良、勇敢、虔诚，以及对自由的追逐，真正影响了他的一生。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、像变色龙一样融入人群</div>
+                <p>整本书最有意思的，可能是他如何像变色龙一样融入不同的环境和人群：在学生时代、在街区，甚至在监狱。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">四、爱是付出，而不是索取</div>
+                <div class="modal-quote">你并不用拥有你所爱的人。爱是付出，而不是索取。</div>
             </div>
         </div>
     </div>
