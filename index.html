@@ -1001,6 +1001,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《只有ICU医生知道》读书笔记" data-book-id="icudoctor" data-title="只有ICU医生知道" data-date="读完 2026-09-02" data-cover="images/icudoctor_cover_20260902.webp" style="--spine-art:url('images/spines/decorations/icudoctor.webp');--spine-color:#F7F7F5;--spine-text:#1581BC;--spine-line:rgba(21,129,188,0.32);--book-height:182px;--book-width:37px;--hover-width:125px;">
+                        <span class="spine-cover" style="background-image:url('images/icudoctor_cover_20260902.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/icudoctor.webp" alt="只有ICU医生知道" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《流浪地球》读书笔记" data-book-id="wanderingearth" data-title="流浪地球" data-date="读完 2026-08-31" data-cover="images/wanderingearth_cover_20260831.webp" style="--spine-art:url('images/spines/decorations/wanderingearth.webp');--spine-color:#17142F;--spine-text:#ECE9E6;--spine-line:rgba(236,233,230,0.36);--book-height:194px;--book-width:37px;--hover-width:130px;">
                         <span class="spine-cover" style="background-image:url('images/wanderingearth_cover_20260831.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1163,6 +1168,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 只有ICU医生知道 -->
+            <div class="book-card" onclick="openModal('icudoctor')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/icudoctor_cover_20260902.webp" alt="只有ICU医生知道封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-02</div>
+                    <div class="book-title">《只有ICU医生知道》</div>
+                    <div class="book-meta">余一生 著 / 安徽文艺出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#医疗纪实</span>
+                        <span class="tag">#ICU</span>
+                        <span class="tag">#病例故事</span>
+                        <span class="tag">#生命</span>
+                    </div>
+                    <div class="book-summary">
+                        “神作”的评价有些水，但书还算易读，也通过特殊病例让我稍微开了一点眼界。ICU的残忍最终只留下一个提醒：善待自己，善待生命。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 流浪地球 -->
             <div class="book-card" onclick="openModal('wanderingearth')">
@@ -3299,6 +3326,47 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-icudoctor" class="modal-overlay" onclick="closeModalOnOverlay(event, 'icudoctor')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('icudoctor')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/icudoctor_cover_20260902.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《只有ICU医生知道》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>余一生 著<br>
+                        <strong>出版社：</strong>安徽文艺出版社<br>
+                        <strong>出版时间：</strong>2026年5月<br>
+                        <strong>ISBN：</strong>9787539686431<br>
+                        <strong>类型：</strong>医疗纪实 / ICU病例<br>
+                        <strong>读完时间：</strong>2026-09-02
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#医疗纪实</span>
+                        <span class="modal-tag">#ICU</span>
+                        <span class="modal-tag">#病例故事</span>
+                        <span class="modal-tag">#生命</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、评价有些水，但还算易读</div>
+                <p>在微信读书上看到这本书，因为它的评价竟然是“神作”，所以产生了兴趣。看完后还是觉得，微信读书的评价等级有些水。书的易读性不错，也借由病人的故事让我接触到一些特殊病例，包括癌症、中毒、蜱虫病等，算是稍微开了一点眼界。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、ICU的残忍</div>
+                <p>作者说，ICU 是一个很残忍的地方。很多时候，无论医生和家属付出多少努力，最终几乎都是没有意义的。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、善待生命</div>
+                <p>还是善待自己，也善待生命吧。</p>
             </div>
         </div>
     </div>
