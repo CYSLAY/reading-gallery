@@ -1001,6 +1001,11 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《我不是潘金莲》读书笔记" data-book-id="panjinlian" data-title="我不是潘金莲" data-date="读完 2026-09-08" data-cover="images/panjinlian_cover_20260908.webp" style="--spine-art:url('images/spines/decorations/panjinlian.webp');--spine-color:#493B72;--spine-text:#FF7F70;--spine-line:rgba(255,127,112,0.38);--book-height:158px;--book-width:37px;--hover-width:125px;">
+                        <span class="spine-cover" style="background-image:url('images/panjinlian_cover_20260908.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/panjinlian.webp" alt="我不是潘金莲" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《只有ICU医生知道》读书笔记" data-book-id="icudoctor" data-title="只有ICU医生知道" data-date="读完 2026-09-02" data-cover="images/icudoctor_cover_20260902.webp" style="--spine-art:url('images/spines/decorations/icudoctor.webp');--spine-color:#F7F7F5;--spine-text:#1581BC;--spine-line:rgba(21,129,188,0.32);--book-height:182px;--book-width:37px;--hover-width:125px;">
                         <span class="spine-cover" style="background-image:url('images/icudoctor_cover_20260902.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1168,6 +1173,28 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 我不是潘金莲 -->
+            <div class="book-card" onclick="openModal('panjinlian')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/panjinlian_cover_20260908.webp" alt="我不是潘金莲封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-08</div>
+                    <div class="book-title">《我不是潘金莲》</div>
+                    <div class="book-meta">刘震云 著 / 花城出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#现实主义</span>
+                        <span class="tag">#上访</span>
+                        <span class="tag">#荒诞</span>
+                        <span class="tag">#叙事风格</span>
+                    </div>
+                    <div class="book-summary">
+                        一个带有现实讽刺意味的上访故事，但无论文笔、叙事还是结构，我都只觉得一般；反复重述前情的写法尤其让人厌烦。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 只有ICU医生知道 -->
             <div class="book-card" onclick="openModal('icudoctor')">
@@ -3326,6 +3353,47 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-panjinlian" class="modal-overlay" onclick="closeModalOnOverlay(event, 'panjinlian')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('panjinlian')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/panjinlian_cover_20260908.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《我不是潘金莲》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>刘震云 著<br>
+                        <strong>出版社：</strong>花城出版社<br>
+                        <strong>出版时间：</strong>2022年7月（新版）<br>
+                        <strong>ISBN：</strong>9787536097278<br>
+                        <strong>类型：</strong>现实主义小说 / 荒诞叙事<br>
+                        <strong>读完时间：</strong>2026-09-08
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#现实主义</span>
+                        <span class="modal-tag">#上访</span>
+                        <span class="modal-tag">#荒诞</span>
+                        <span class="modal-tag">#叙事风格</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">一、书名之外的上访故事</div>
+                <p>这种小说确实很难评价。只看《我不是潘金莲》这个书名，谁能想到写的竟然是一个上访的故事？故事虽然带有一些讽刺现实的意味，但表达得很直白、很单纯，我甚至没太理解其中被推崇的“高级”究竟在哪里。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">二、只觉得一般</div>
+                <p>看到不少人夸刘震云，但在我看来，无论是文笔、叙事还是结构，都只能给到一般水平。</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">三、令人厌烦的反复重述</div>
+                <p>最让我烦的是，作者总在一些不那么重要的地方，反复把前面发生过的事重新说一遍，生怕读者忘了一样。不知道这究竟是一种写法、一种执着，还是一种风格，总之我不喜欢。</p>
             </div>
         </div>
     </div>
