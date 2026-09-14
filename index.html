@@ -4354,8 +4354,7 @@
             syncShelfJustify();
         }
 
-        /* 初始化 + resize 监听 + 月份切换后调用 */
-        autoScaleBookshelf();
+        /* resize 监听；首次缩放在全年书架完成可见书籍筛选后执行。 */
         var shelfResizeFrame = 0;
         function scheduleBookshelfScale() {
             cancelAnimationFrame(shelfResizeFrame);
@@ -4473,12 +4472,13 @@
             [yearSel, monthSel].forEach(function(sel) {
                 if (!sel) return;
                 sel.addEventListener('change', function() {
-                    /* 等筛选与滑动动画完成后再同步（动画约 260ms） */
+                    /* 滑出、滑入各约260ms；最终测量须等两段过渡都结束，
+                     * 否则平移中的书脊会撑大 scrollWidth，留下轻微偏小的缩放。 */
                     setTimeout(syncAnnualControls, 0);
                     setTimeout(function() {
                         syncAnnualControls();
                         autoScaleBookshelf();
-                    }, 400);
+                    }, shelfSlideDuration * 2 + 80);
                 });
             });
 
@@ -4614,6 +4614,11 @@
                 }, 80);
             });
         })();
+
+        /* 先确定首行实际可见书籍（最多20本），再在首次绘制前计算缩放。
+         * 不得在 setupAnnualShelf 前测量全部书，否则隐藏溢出书后会残留过小的 zoom。
+         * 放在 IIFE 外，兼容总数不超过20本、无需展开控件的情况。 */
+        autoScaleBookshelf();
     </script>
 </body>
 </html>
