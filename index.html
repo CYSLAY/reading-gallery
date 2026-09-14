@@ -745,6 +745,13 @@
         .shelf-book[data-book-id="panjinlian"] .spine-art {
             height: 20%;
         }
+        /* 短书脊底部单独留出树形装饰区，等比显示，不侵入标题。 */
+        .shelf-book[data-book-id="readatree"] .spine-art {
+            top: calc(var(--book-height) - 28px);
+            height: auto;
+            background-size: contain;
+            bottom: 2px;
+        }
         /* hover 时保留装饰图案，不隐藏 */
 
         /* Modal Styles */
@@ -1004,6 +1011,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <!-- 评价2档→158px；正式正文351字→篇幅4档→43px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《如何阅读一棵树》读书笔记" data-book-id="readatree" data-title="如何阅读一棵树" data-date="读完 2026-09-12" data-cover="images/readatree_cover_20260912.webp" style="--spine-art:url('images/spines/decorations/readatree.webp');--spine-color:#F3A562;--spine-text:#2B251E;--spine-line:rgba(43,37,30,0.32);--book-height:158px;--book-width:43px;--hover-width:131px;">
+                        <span class="spine-cover" style="background-image:url('images/readatree_cover_20260912.webp');"></span>
+                        <span class="spine-art" aria-hidden="true"></span>
+                        <img src="images/spines/readatree.webp" alt="如何阅读一棵树" class="spine-title-img">
+                    </button>
                     <button class="shelf-book" type="button" aria-label="打开《我不是潘金莲》读书笔记" data-book-id="panjinlian" data-title="我不是潘金莲" data-date="读完 2026-09-08" data-cover="images/panjinlian_cover_20260908.webp" style="--spine-art:url('images/spines/decorations/panjinlian.webp');--spine-color:#493B72;--spine-text:#FF7F70;--spine-line:rgba(255,127,112,0.38);--book-height:158px;--book-width:37px;--hover-width:125px;">
                         <span class="spine-cover" style="background-image:url('images/panjinlian_cover_20260908.webp');"></span>
                         <span class="spine-art" aria-hidden="true"></span>
@@ -1176,6 +1189,27 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 如何阅读一棵树 -->
+            <div class="book-card" onclick="openModal('readatree')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/readatree_cover_20260912.webp" alt="如何阅读一棵树封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-12</div>
+                    <div class="book-title">《如何阅读一棵树》</div>
+                    <div class="book-meta">[英] 特里斯坦·古利 著 / 四木 译 / 上海社会科学院出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#自然科普</span>
+                        <span class="tag">#树木观察</span>
+                        <span class="tag">#阅读体验</span>
+                    </div>
+                    <div class="book-summary">
+                        今年至今读过最怪的一本书：写法和翻译让阅读体验堪称糟糕，却还是有“没用的知识又增加了”的感觉。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 我不是潘金莲 -->
             <div class="book-card" onclick="openModal('panjinlian')">
@@ -3356,6 +3390,47 @@
                     <li><strong>说谎</strong>：根在于没有说真话的环境</li>
                     <li><strong>拖延</strong>：本质不是时间管理问题，<strong>是情绪管理问题</strong></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-readatree" class="modal-overlay" onclick="closeModalOnOverlay(event, 'readatree')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('readatree')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/readatree_cover_20260912.webp" alt="封面">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《如何阅读一棵树》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[英] 特里斯坦·古利 著 / 四木 译<br>
+                        <strong>出版社：</strong>上海社会科学院出版社<br>
+                        <strong>出版时间：</strong>2025年3月<br>
+                        <strong>ISBN：</strong>9787552046076<br>
+                        <strong>类型：</strong>自然科普 / 树木观察<br>
+                        <strong>读完时间：</strong>2026-09-12
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#自然科普</span>
+                        <span class="modal-tag">#树木观察</span>
+                        <span class="modal-tag">#阅读体验</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">一、今年至今最怪的一本书</div>
+                <p>这是我今年至今读下来最怪的一本书。如果不是因为自己的名字，可能很难坚持读完。原作者总想在科普中穿插一些个人生活的“小趣事”来增加趣味，但我并不觉得有趣；再加上翻译的文笔十分拙劣，读起来非常困难。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">二、没用的知识又增加了</div>
+                <p>即便阅读体验堪称糟糕，还是有一种“没用的知识又增加了”的感觉。记下几条书中的观察线索：</p>
+                <ul>
+                    <li>书中对针叶树的概括：光照需求较少，更耐旱，叶色更深，能生长在更高的地方。</li>
+                    <li>先锋树种能迅速扩展领地，常见于树林边缘；树林的主人则是顶级树种，它们缓慢长高，逐渐占据中心。顶级树种比较耐阴，能在先锋树种的阴影下生长，再慢慢超过它们。</li>
+                    <li>关于喜光程度，记住了一句口诀：“松树第一无需猜，冷云铁杉渐次排。”</li>
+                    <li>树会进行自我修剪，让下部的树枝脱落。</li>
+                    <li>“防御者树枝”的作用是压制竞争对手。</li>
+                </ul>
+                <p>总结一下，在树的生长过程中，基因、自然和人的影响都有迹可循。</p>
             </div>
         </div>
     </div>
