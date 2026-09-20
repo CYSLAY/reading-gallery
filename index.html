@@ -1011,6 +1011,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <!-- 评价暂定6档→182px；正式正文1439字→篇幅10档→61px；不根据篇幅抬高评价。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《你不知道的自己》读书笔记" data-book-id="unknownself" data-title="你不知道的自己" data-date="读完 2026-09-20" data-cover="images/unknownself_cover_20260920.webp" style="--spine-art:url('images/spines/decorations/unknownself.webp');--spine-color:#CDCED7;--spine-text:#3D3C42;--spine-line:rgba(61,60,66,0.28);--book-height:182px;--book-width:61px;--hover-width:140px;">
+                        <span class="spine-cover" style="background-image:url('images/unknownself_cover_20260920.webp');background-size:contain;"></span>
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.62;filter:none;"></span>
+                        <img src="images/spines/unknownself.webp" alt="你不知道的自己" class="spine-title-img">
+                    </button>
                     <!-- 评价2档→158px；正式正文351字→篇幅4档→43px。 -->
                     <button class="shelf-book" type="button" aria-label="打开《如何阅读一棵树》读书笔记" data-book-id="readatree" data-title="如何阅读一棵树" data-date="读完 2026-09-12" data-cover="images/readatree_cover_20260912.webp" style="--spine-art:url('images/spines/decorations/readatree.webp');--spine-color:#F3A562;--spine-text:#2B251E;--spine-line:rgba(43,37,30,0.32);--book-height:158px;--book-width:43px;--hover-width:131px;">
                         <span class="spine-cover" style="background-image:url('images/readatree_cover_20260912.webp');"></span>
@@ -1189,6 +1195,27 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 你不知道的自己 -->
+            <div class="book-card" onclick="openModal('unknownself')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/unknownself_cover_20260920.webp" alt="你不知道的自己封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-20</div>
+                    <div class="book-title">《你不知道的自己》</div>
+                    <div class="book-meta">曾奇峰 著 / 希望出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#自我认知</span>
+                        <span class="tag">#精神分析</span>
+                        <span class="tag">#关系边界</span>
+                    </div>
+                    <div class="book-summary">
+                        关于自我认知、情绪、关系边界与亲子关系的摘记。对过去和回忆的在意，让我联想到自己的时间焦虑。
+                    </div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 如何阅读一棵树 -->
             <div class="book-card" onclick="openModal('readatree')">
@@ -1957,6 +1984,80 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 你不知道的自己 -->
+    <div id="modal-unknownself" class="modal-overlay" onclick="closeModalOnOverlay(event, 'unknownself')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('unknownself')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/unknownself_cover_20260920.webp" alt="你不知道的自己封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《你不知道的自己》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>曾奇峰 著<br>
+                        <strong>出版社：</strong>希望出版社<br>
+                        <strong>类型：</strong>心理学 / 精神分析<br>
+                        <strong>读完时间：</strong>2026-09-20
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#自我认知</span>
+                        <span class="modal-tag">#精神分析</span>
+                        <span class="modal-tag">#关系边界</span>
+                    </div>
+                </div>
+            </div>
+            <div class="note-editorial" style="color:#77717d;font-size:0.88em;line-height:1.8;margin-bottom:26px;">整理说明：依据阅读摘记按主题转述，并非逐字校对的原书引文；涉及人格、亲子及两性关系的精神分析解释保留为书中观点，不作为普遍规律或诊断依据。</div>
+            <div class="modal-section">
+                <div class="modal-section-title">一、自我认知：自卑、自傲与自尊</div>
+                <p>书中认为，自傲和自卑是同一种本质的两种表现，都与过度关注自己、不善于和他人交流有关。自卑，是想象中的自大对真实自我的攻击。</p>
+                <p>一个人外表的改变，来源于内在自我认知和人际关系的改变。学习任何东西，首先要建立一个新的自我意象，比如“我是一个看书很快的人”“我是一个每天健身的人”“我是一个可以流利讲外语的人”。</p>
+                <p>茨威格的《一个陌生女人的来信》中，女主人公与男主人公共度一夜后，对方给了她钱，将她当作性交易对象。她转而把钱给了男人的仆人。书中借此谈真正的自尊：你把我当作什么，跟我有什么关系？</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">二、情绪、孤独与时间焦虑</div>
+                <p>书中把接纳孤独、能够享受孤独，视为心理发展成熟的重要标志。成就感则是对抗负面情绪的一种手段。</p>
+                <p>假如有一种药，吃下去就能没有痛苦、一直快乐，书中认为大部分人也不会愿意吃，因为那样的生活就像行尸走肉。</p>
+                <p>我突然发现，自己对“过去”和“回忆”太过在意，与“时间焦虑”是有关系的：那些没有忘记的过去经历，让内心持续焦虑。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">三、关系中的期待与边界</div>
+                <p>书中认为，人际关系中的受伤，来自对方对我们的实际态度，比我们希望的更差。让一个人承担发生在自己身上的一切事情的后果，也是一种尊重。</p>
+                <p>如果成长过程中与母亲的界限不清，这种关系模式可能被投射到其他人际关系中：一方面过度依赖别人替自己做决定，另一方面又过多地想了解别人的内心，希望别人依赖自己。</p>
+                <p>人性有善也有恶，恶往往隐藏起来影响我们。书中把善良理解为一种能力，其中也包括洞察人性中恶的能力。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">四、亲子关系与家庭界限</div>
+                <p>做一个“足够好的妈妈”，而不是“完美妈妈”；书中认为，执着于完美反而会伤害自己和孩子。</p>
+                <p>孩子学习不好，可能是因为内心的“噪声”太大。家长要学会帮孩子承担心理上的“歹徒”。书中认为，没有受到过多控制的孩子，能够把精力用在学习上；受到过多控制的孩子，则可能在学习之外寻找自主感，以反抗控制。</p>
+                <p>书中将孩子的情感能力与向母亲学习联系起来，将社交能力与向父亲学习联系起来，并把父亲缺席解释为交往边界不清的一种原因：孩子可能不断试探生活的边界，长大后甚至试探法律的边界。</p>
+                <p>关于家庭界限不清，记下书中的三种解释：</p>
+                <ul>
+                    <li>过度严厉的父亲，可能是在拼命掩盖自己没有长大的部分，就像男孩在喜欢的女孩面前装模作样。</li>
+                    <li>过度唠叨的母亲，被书中解释为通过说话满足幸福感，并与仍停留在“口欲期”联系起来。</li>
+                    <li>学钢琴也可能具有象征意义，代表孩子在满足父母的某种欲望和需求，但这可能导致过度的情感隔离。</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">五、亲密关系中的精神分析解释</div>
+                <p>关于爱与性冲动，书中提出一种两性差异的解释：爱可能抑制男性的性冲动，而女性的性冲动可能被爱唤起。</p>
+                <p>书中认为，很多女孩会爱上与自己父亲相似的男人。</p>
+                <p>书中还将部分女性在性关系中的受虐体验解释为一种被动反抗社会规则的方式：通过看到男性打破规则而获得快感。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">六、心理防御：投射、自恋与情感隔离</div>
+                <p>当一个人通过某些外在表现告诉自己“我生病了，我很可怜”，书中将其解释为一种自恋反应。在对自恋型人格障碍的精神分析描述中，书中强调“以自己为客体”，即难以分清自我和他人。</p>
+                <p>一个人强调自己“仁至义尽、问心无愧”，书中认为这可能是在保护自己：既不让别人说闲话，也不让自己觉得做错了。这被解释为一种情感隔离。</p>
+                <p>关于投射，书中以朱元璋为例：觉得自己不配成为皇帝，因而不相信自己，又把这种不信任投射到他人身上，认为别人也不相信自己。</p>
+                <p>书中把反社会人格中的暴力表现解释为：只能借助这种方式，对抗内心的软弱和不稳定。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">七、潜意识、阻抗与新的体验</div>
+                <p>记录自己的梦，再尝试通过弗洛伊德的方法解析梦境，以理解自己的潜意识。</p>
+                <p>在精神分析治疗中，一切使患者逃避探索内心世界所带来痛苦的因素，都可以被称为“阻抗”。</p>
+                <p>书中认为，打破强迫性重复的方式，是创造新的、好的体验，去替代不好的体验。</p>
+            </div>
         </div>
     </div>
 
