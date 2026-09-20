@@ -1011,6 +1011,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <!-- 评价2档→158px（总体明显失望，仅认可张居正部分）；正式正文256字→篇幅3档→40px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《万历十五年》读书笔记" data-book-id="wanli1587" data-title="万历十五年" data-date="读完 2026-09-20" data-cover="images/wanli1587_cover_20260920.webp" style="--spine-art:url('images/spines/decorations/wanli1587.webp');--spine-color:#FBFCF1;--spine-text:#222A12;--spine-line:rgba(34,42,18,0.28);--book-height:158px;--book-width:40px;--hover-width:126px;">
+                        <span class="spine-cover" style="background-image:url('images/wanli1587_cover_20260920.webp');background-size:contain;"></span>
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <img src="images/spines/wanli1587.webp" alt="万历十五年" class="spine-title-img">
+                    </button>
                     <!-- 评价暂定6档→182px；正式正文1439字→篇幅10档→61px；不根据篇幅抬高评价。 -->
                     <button class="shelf-book" type="button" aria-label="打开《你不知道的自己》读书笔记" data-book-id="unknownself" data-title="你不知道的自己" data-date="读完 2026-09-20" data-cover="images/unknownself_cover_20260920.webp" style="--spine-art:url('images/spines/decorations/unknownself.webp');--spine-color:#CDCED7;--spine-text:#3D3C42;--spine-line:rgba(61,60,66,0.28);--book-height:182px;--book-width:61px;--hover-width:140px;">
                         <span class="spine-cover" style="background-image:url('images/unknownself_cover_20260920.webp');background-size:contain;"></span>
@@ -1195,6 +1201,24 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 万历十五年 -->
+            <div class="book-card" onclick="openModal('wanli1587')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/wanli1587_cover_20260920.webp" alt="万历十五年封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-20</div>
+                    <div class="book-title">《万历十五年》</div>
+                    <div class="book-meta">[美] 黄仁宇 著 / 中华书局 / 增订纪念本</div>
+                    <div class="book-tags">
+                        <span class="tag">#历史</span>
+                        <span class="tag">#阅读体验</span>
+                    </div>
+                    <div class="book-summary">书名很有吸引力，读到后来却觉得冗长、像论文；相比之下，更喜欢杨照《史记的读法》里的深刻与深情。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 你不知道的自己 -->
             <div class="book-card" onclick="openModal('unknownself')">
@@ -1984,6 +2008,34 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 万历十五年 -->
+    <div id="modal-wanli1587" class="modal-overlay" onclick="closeModalOnOverlay(event, 'wanli1587')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('wanli1587')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/wanli1587_cover_20260920.webp" alt="万历十五年封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《万历十五年》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[美] 黄仁宇 著<br>
+                        <strong>出版社：</strong>中华书局<br>
+                        <strong>版本：</strong>增订纪念本<br>
+                        <strong>读完时间：</strong>2026-09-20
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#历史</span>
+                        <span class="modal-tag">#阅读体验</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p>这个书名不知为什么有一种巨大的魔力，吸引着我，想借它窥探历史的样貌。但终究还是高估了自己，没能真正读完。</p>
+                <p>前面写张居正时，我还读得饶有趣味，仿佛窥见了历史的真相；到了申时行的部分，却觉得过分冗长、无聊。大概也因为，在我的历史印象里，这个人物并不那么突出，让我少了些追读下去的兴趣。</p>
+                <p>作者在文字表达上的短板，对我来说也很明显。写着写着，越来越像论文，少了我期待的传记式叙述，让人读得难受。相比之下，我觉得远不如杨照的《史记的读法》深刻。而深刻往往来源于深情——也许是我没能从这本书里，感受到作者对中国历史同样深的情感。</p>
+            </div>
         </div>
     </div>
 
