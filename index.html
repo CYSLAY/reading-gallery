@@ -1011,6 +1011,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <!-- 评价9档→200px（用户明确指定）；正式正文452字→篇幅5档→46px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《你的夏天还好吗？》读书笔记" data-book-id="summerokay" data-title="你的夏天还好吗？" data-date="读完 2026-09-21" data-cover="images/summerokay_cover_20260921.webp" style="--spine-art:url('images/spines/decorations/summerokay.webp');--spine-color:#4DB2D0;--spine-text:#FFFFFF;--spine-line:rgba(255,255,255,0.28);--book-height:200px;--book-width:46px;--hover-width:141px;">
+                        <span class="spine-cover" style="background-image:url('images/summerokay_cover_20260921.webp');background-size:contain;"></span>
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <img src="images/spines/summerokay.webp" alt="你的夏天还好吗？" class="spine-title-img">
+                    </button>
                     <!-- 评价2档→158px（总体明显失望，仅认可张居正部分）；正式正文256字→篇幅3档→40px。 -->
                     <button class="shelf-book" type="button" aria-label="打开《万历十五年》读书笔记" data-book-id="wanli1587" data-title="万历十五年" data-date="读完 2026-09-20" data-cover="images/wanli1587_cover_20260920.webp" style="--spine-art:url('images/spines/decorations/wanli1587.webp');--spine-color:#FBFCF1;--spine-text:#222A12;--spine-line:rgba(34,42,18,0.28);--book-height:158px;--book-width:40px;--hover-width:126px;">
                         <span class="spine-cover" style="background-image:url('images/wanli1587_cover_20260920.webp');background-size:contain;"></span>
@@ -1201,6 +1207,24 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 你的夏天还好吗？ -->
+            <div class="book-card" onclick="openModal('summerokay')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/summerokay_cover_20260921.webp" alt="你的夏天还好吗？封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-21</div>
+                    <div class="book-title">《你的夏天还好吗？》</div>
+                    <div class="book-meta">[韩] 金爱烂 著 / 薛舟 译</div>
+                    <div class="book-tags">
+                        <span class="tag">#小说</span>
+                        <span class="tag">#孤独</span>
+                    </div>
+                    <div class="book-summary">在这个逼仄压抑的夏天，只有孤独和绝望。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 万历十五年 -->
             <div class="book-card" onclick="openModal('wanli1587')">
@@ -2008,6 +2032,38 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 你的夏天还好吗？ -->
+    <div id="modal-summerokay" class="modal-overlay" onclick="closeModalOnOverlay(event, 'summerokay')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('summerokay')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/summerokay_cover_20260921.webp" alt="你的夏天还好吗？封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《你的夏天还好吗？》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[韩] 金爱烂 著<br>
+                        <strong>译者：</strong>薛舟<br>
+                        <strong>读完时间：</strong>2026-09-21
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#小说</span>
+                        <span class="modal-tag">#孤独</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p>没读过这么绝望的书。</p>
+                <p>那些夏天的气息都是黏糊糊的、多虫的，酸性洗涤剂的味道似乎充斥着空气，窗外不断传来汽车的轰鸣声。屋里的灯总是闪闪烁烁，像断断续续的生命。</p>
+                <p>遗憾的青春，临盆的妻子，死去的父亲，发疯的母亲，坐牢的儿子，和整个冷漠而孤独的世界。</p>
+                <p>谎言、溺水、拆迁、贫穷、偷渡、癌症、监狱、虚荣、传销、自杀，还有突如其来的死亡。</p>
+                <p>沉入水底时的寂静，拼命游向水面后听到的，是夏天刺耳的蝉鸣。总是有一棵记忆中巨大的树，却每次都会倒在废墟中。歌利亚龙门吊在水中没有任何叹息。诡异的寂静。</p>
+                <p>好像每一个你最害怕的悲剧，都一定会发生。</p>
+                <p>前辈一开始就在骗她，一切情愫都只是误会；戒指一定会掉进废墟，孕妇走入废墟，羊水必破；丢掉了拼命用绿色胶带缠住的母亲的尸体，龙门吊上果然空无一人；每天学中文的出租车司机，他偷渡而来的中国妻子死于癌症；监狱里的孩子寄来的信，没有任何关心；精心准备的美甲，在开啤酒时断裂；在异国他乡等待的朋友，再也不会出现了；那个扑进我怀里、有着天使面孔的学生啊，最后上吊自杀了。</p>
+                <p>在这个逼仄压抑的夏天，只有孤独和绝望。</p>
+            </div>
         </div>
     </div>
 
