@@ -1012,6 +1012,12 @@
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
                     <!-- 评价9档→200px（用户明确指定）；正式正文486字→篇幅5档→46px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《众神的样子》读书笔记" data-book-id="portraitsofgods" data-title="众神的样子" data-date="读完 2026-09-23" data-cover="images/portraitsofgods_cover_20260923.webp" style="--spine-art:url('images/spines/decorations/portraitsofgods.webp');--spine-color:#292D30;--spine-text:#F6F5EF;--spine-line:rgba(220,183,130,0.35);--book-height:188px;--book-width:61px;--hover-width:137px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/portraitsofgods_cover_20260923.webp');"></span>
+                        <img src="images/spines/portraitsofgods.webp" alt="众神的样子" class="spine-title-img">
+                    </button>
+
                     <button class="shelf-book" type="button" aria-label="打开《你的夏天还好吗？》读书笔记" data-book-id="summerokay" data-title="你的夏天还好吗？" data-date="读完 2026-09-21" data-cover="images/summerokay_cover_20260921.webp" style="--spine-art:url('images/spines/decorations/summerokay.webp');--spine-color:#4DB2D0;--spine-text:#FFFFFF;--spine-line:rgba(255,255,255,0.28);--book-height:200px;--book-width:46px;--hover-width:141px;">
                         <span class="spine-cover" style="background-image:url('images/summerokay_cover_20260921.webp');background-size:contain;"></span>
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
@@ -1207,6 +1213,26 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 众神的样子 -->
+            <div class="book-card" onclick="openModal('portraitsofgods')">
+                <div class="book-cover-wrapper">
+                    <img class="book-cover" src="images/portraitsofgods_cover_20260923.webp" alt="众神的样子封面">
+                </div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-23</div>
+                    <div class="book-title">《众神的样子》</div>
+                    <div class="book-meta">江逐浪 著 / 化学工业出版社</div>
+                    <div class="book-tags">
+                        <span class="tag">#希腊神话</span>
+                        <span class="tag">#西方艺术</span>
+                        <span class="tag">#看画笔记</span>
+                    </div>
+                    <div class="book-summary">好不容易找到一本能把希腊神话讲清楚的书，还有大量画作作参考。记下众神的故事和识别特征，留着以后看画时用。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
+
 
             <!-- 你的夏天还好吗？ -->
             <div class="book-card" onclick="openModal('summerokay')">
@@ -2032,6 +2058,84 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 众神的样子 -->
+    <div id="modal-portraitsofgods" class="modal-overlay" onclick="closeModalOnOverlay(event, 'portraitsofgods')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('portraitsofgods')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/portraitsofgods_cover_20260923.webp" alt="众神的样子封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《众神的样子》</div>
+                    <div class="modal-book-meta">
+                        <strong>副标题：</strong>希腊神话与西方艺术<br>
+                        <strong>作者：</strong>江逐浪 著<br>
+                        <strong>出版：</strong>化学工业出版社 / 2020<br>
+                        <strong>ISBN：</strong>9787122352606<br>
+                        <strong>读完时间：</strong>2026-09-23
+                    </div>
+                    <div class="modal-tags">
+                        <span class="modal-tag">#希腊神话</span>
+                        <span class="modal-tag">#西方艺术</span>
+                        <span class="modal-tag">#看画笔记</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">读后感</div>
+                <p>好不容易找到一本能把希腊神话讲清楚的书，更难能可贵的是，还有大量画作作为参考，能更直观地看到艺术家们是如何表现这些神话题材的。</p>
+                <p>记下这些要点，不知道自己能记住多少，仅供以后看画时装逼用。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">一、神系更迭：从天空之神到宙斯</div>
+                <p>乌拉诺斯与克洛诺斯：乌拉诺斯本身就是天空的化身，也是第一代神王；天王星的西文名 Uranus 取自他的名字。儿子克洛诺斯用镰刀阉割父亲，夺取王权。看画记：镰刀、阉割父亲。</p>
+                <p>维纳斯的诞生：按赫西俄德的版本，乌拉诺斯被割下的生殖器落入海中，激起泡沫，阿芙洛狄忒由此诞生；她对应罗马神话里的维纳斯。看画记：海上诞生的爱与美之神。</p>
+                <p>克洛诺斯吞子：担心孩子像自己一样推翻父亲，克洛诺斯把出生的孩子吞进肚子。看画记：吃小孩。</p>
+                <p>宙斯的童年：宙斯被母亲藏起来，逃过被吞食的命运。一个常见版本中，他由母山羊阿玛尔忒亚哺育。看画记：婴儿喝羊奶。</p>
+                <p>泰坦的陨落：宙斯击败父辈，将克洛诺斯及战败的泰坦神囚入塔尔塔洛斯深渊，成为第三代神王。</p>
+                <p>男神三兄弟：宙斯掌雷霆，哈迪斯掌冥界，波塞冬掌海洋。我的记法是雷霆、双叉、三叉，按“1、2、3”记；双叉是哈迪斯在部分后世艺术中的标志，雷霆的画法并不固定为一个尖。成年的宙斯也常与鹰一起出现。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">二、普罗米修斯：造人、盗火与受罚</div>
+                <p>造人：普罗米修斯用泥土塑造人类；在一些艺术作品里，雅典娜为人注入灵魂。看画记：塑造人形、女神赋予生命。</p>
+                <p>盗火与受罚：宙斯不肯让人类得到火，普罗米修斯便偷来火种，带给人类文明。宙斯大怒，把他锁在高加索山上，让鹰啄食他的肝脏。看画记：被锁住的人、鹰啄肝脏。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">三、宙斯的家族：七位配偶与子女</div>
+                <p>这里按《神谱》相关段落的顺序记七位配偶，不把它当成所有神话版本都一致的婚姻名单。</p>
+                <p>第一位，智慧女神墨提斯：宙斯吞下怀孕的墨提斯，后来雅典娜从他的头部诞生。劈开头颅、全副武装的女神跃出的场景，是常见表现方式。看画记：男人头上的女神、长矛、盾牌和铠甲。</p>
+                <p>第二位，忒弥斯：掌管神圣秩序与正义。天平、宝剑可帮助联想后世的正义女神形象，但并非忒弥斯独有的标志。她生下时序三女神和命运三女神；《神谱》中的时序三女神分别代表秩序、正义、和平，不能直接等同于春、夏、秋。看画时，“三女神牵手起舞”先作为线索，不能单凭这一点认定身份。命运三女神则以纺、量、剪生命之线来记；有些作品把她们画成年老的妇人。</p>
+                <p>第三位，海洋女神欧律诺墨：她是俄刻阿诺斯之女，与宙斯生下美惠三女神。看画记：三个裸身女子相伴的经典组合。</p>
+                <p>第四位，丰收女神得墨忒耳：常见标志是头上或手里的麦穗，也可见富饶号角。女儿珀耳塞福涅被哈迪斯带到冥界，成为冥后，每年有一段时间必须留在那里。母女分离与重聚，对应大地的枯荣和季节循环。看画记：女儿从冥界回到母亲身边。</p>
+                <p>第五位，记忆女神谟涅摩叙涅：与宙斯生下九位缪斯，掌管诗歌、音乐等文艺领域。</p>
+                <p>第六位，勒托：生下阿尔忒弥斯和阿波罗。勒托不是黑夜女神尼克斯；她的两个孩子都是神射手，常持弓箭。阿尔忒弥斯在后世常与月神相联系，阿波罗常与太阳神相联系。看画记：母亲与双胞胎；月神形象头顶的月牙饰。</p>
+                <p>第七位，天后赫拉：婚姻女神，偏偏要一直应付宙斯的婚外情。看画记：王冠、权杖、孔雀；有的形象还会持祭盘，但圆盘不是独有标志。</p>
+                <p>另记酒神狄俄尼索斯：母亲塞墨勒死后，宙斯将尚未足月的胎儿缝入大腿，继续孕育，最后从腿上生下酒神。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">四、宙斯的变身与赫拉的追查</div>
+                <p>关于宙斯为什么这么风流，记下书中的一种解释：不同地区的神祇和地方传说不断被整合进希腊神话体系，宙斯也就有了越来越庞大的家族。</p>
+                <p>变身故事按画面记：黑云或浓雾——伊娥；布谷鸟——赫拉；化作阿尔忒弥斯——侍女卡利斯托；天鹅——勒达；白公牛——欧罗巴；金雨，有时画成金币——达娜厄。</p>
+                <p>伊娥与白牛：伊娥先是宙斯追逐的女子，后来才被变成白色母牛；不要把“宙斯化为黑云”与“伊娥变成白牛”记成同一个变化。</p>
+                <p>赫尔墨斯救伊娥：赫尔墨斯是商业之神，也是行动迅速的神使。看画记：带翼的帽子和鞋子、双蛇杖。他奉宙斯之命，用笛声使看守伊娥的百眼巨人阿尔戈斯入睡，随后将其杀死。看画记：吹笛的神使、沉睡的守卫、白牛。赫拉把阿尔戈斯的眼睛放到孔雀尾羽上。</p>
+                <p>伊娥后来流浪到埃及，在希腊—罗马传统中被与埃及女神伊西斯联系、认同起来；不是说埃及的伊西斯信仰就起源于这段希腊故事。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">五、爱情题材：阿波罗、维纳斯与小爱神</div>
+                <p>阿波罗与达芙妮：阿波罗得罪丘比特后，被金箭射中，爱上达芙妮；达芙妮被铅箭射中，拒绝爱情。在追逐中，达芙妮求助，最终化为月桂树。变成树的是达芙妮，不是阿波罗。看画记：丘比特射箭、阿波罗追逐、女人化树。阿波罗还可用桂冠、弓箭和乌鸦等线索来认。</p>
+                <p>维纳斯、火神与战神：维纳斯的丈夫是外貌不美、以锻造见长的赫淮斯托斯，她却与战神阿瑞斯相恋，被丈夫设网捉住。看画记：铁匠、锻炉，以及床上被网困住的情侣。</p>
+                <p>丘比特与安忒洛斯：在一种常见谱系中，丘比特所对应的厄洛斯是维纳斯与战神之子。安忒洛斯则有作为厄洛斯弟弟的传说。我的记忆点暂记为“蝴蝶翅膀”，但这不是可通用的身份判据，仍要结合具体作品核对。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">六、冥界、纷争与惩罚</div>
+                <p>卡戎：冥河摆渡人。以他命名的是冥王星的卫星——冥卫一 Charon，不是冥王星本身。看画记：船、冥河、亡魂。</p>
+                <p>厄里斯与金苹果：按赫西俄德的版本，不和女神厄里斯是黑夜女神尼克斯之女。金苹果引发三位女神争美，经由帕里斯的裁决，成为特洛伊战争的神话起因之一。看画记：金苹果。</p>
+                <p>伊克西翁之轮：伊克西翁被绑在不断转动的轮子上，承受永无休止的折磨。看画记：被缚在轮上的人。</p>
+                <p>拉奥孔：他警告特洛伊人不要接受木马，随后遭到海蛇袭击。“雅典娜派蛇”是其中一种叙述，派蛇的神与惩罚缘由另有异说。看画记：父子三人与两条巨蛇纠缠。</p>
+            </div>
+            <details class="note-editorial" style="margin:24px 0 0;padding:16px 18px;border-top:1px solid #e5e5df;color:#777;font-size:13px;line-height:1.8;"><summary style="cursor:pointer;">校订说明与核验来源（不属于读后感）</summary><div style="margin:10px 0;">整理范围：按本次要求归类、润色，并校正明显误记；以下为校订说明，不冒充读者的原始感受，也不是对原书逐页勘误。</div><div style="margin:10px 0;">名称与谱系：乌拉诺斯本就是天空的化身；卡戎对应冥卫一而非冥王星；勒托不是尼克斯。希腊与罗马神名在首次出现处作必要对照。卡戎双亲为厄瑞玻斯与尼克斯的说法，早期出处未能落实，正文暂不作确定表述。</div><div style="margin:10px 0;">普罗米修斯：“为帮助宙斯打赢泰坦战争而造人”及“趁宙斯醉酒盗火”未核实为古典通行叙事，正文不作确定表述；雅典娜赋魂则保留为艺术作品中的表现方式。</div><div style="margin:10px 0;">图像识别：时序三女神并非统一的“春夏秋”；天平与宝剑、三女神起舞、圆盘、蝴蝶翅膀等都不能脱离具体作品单独断定身份。安忒洛斯的蝶翼说保留为待核的个人记忆点，不当作普遍规则。</div><div style="margin:10px 0;">版本差异：羊乳哺育、维纳斯诞生、爱神谱系、季节神身份及拉奥孔受罚等故事均有异文；神名与后世太阳、月亮的对应也不宜视为从始至终完全相同。</div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://m.hnlib.com/Recommend/Detail/1767">书目核验：海宁市图书馆</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.theoi.com/Text/HesiodTheogony.html">赫西俄德《神谱》：神系与宙斯配偶</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.nasa.gov/missions/charon-at-40-four-decades-of-discovery-on-plutos-largest-moon/">NASA：冥卫一 Charon 的命名</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.theoi.com/Ther/AixAmaltheia.html">古典材料汇编：阿玛尔忒亚</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.theoi.com/Titan/TitanPrometheus.html">古典材料汇编：普罗米修斯</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://kataloget.thorvaldsensmuseum.dk/en/A319">Thorvaldsens Museum：雅典娜为人赋魂</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.theoi.com/Khthonios/Kharon.html">古典材料汇编：卡戎</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.theoi.com/Ouranios/ErosAnteros.html">古典材料汇编：安忒洛斯</a></div><div style="margin:6px 0;"><a target="_blank" rel="noopener noreferrer" style="color:#60695a;" href="https://www.ashmolean.org/laocoon-group">Ashmolean：拉奥孔群像</a></div></details>
         </div>
     </div>
 
