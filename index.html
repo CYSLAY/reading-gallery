@@ -1012,6 +1012,12 @@
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
                     <!-- 评价9档→200px（用户明确指定）；正式正文486字→篇幅5档→46px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《东京八平米》读书笔记" data-book-id="tokyo8m2" data-title="东京八平米" data-date="读完 2026-09-29" data-cover="images/tokyo8m2_cover_20260929.webp" style="--spine-art:url('images/spines/decorations/tokyo8m2.webp');--spine-color:#FAFAF7;--spine-text:#1F160B;--spine-line:rgba(230,37,26,0.28);--book-height:176px;--book-width:40px;--hover-width:136px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/tokyo8m2_cover_20260929.webp');"></span>
+                        <img src="images/spines/tokyo8m2.webp" alt="东京八平米" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+
                     <button class="shelf-book" type="button" aria-label="打开《众神的样子》读书笔记" data-book-id="portraitsofgods" data-title="众神的样子" data-date="读完 2026-09-23" data-cover="images/portraitsofgods_cover_20260923.webp" style="--spine-art:url('images/spines/decorations/portraitsofgods.webp');--spine-color:#292D30;--spine-text:#F6F5EF;--spine-line:rgba(220,183,130,0.35);--book-height:188px;--book-width:61px;--hover-width:137px;">
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 28px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
                         <span class="spine-cover" style="background-image:url('images/portraitsofgods_cover_20260923.webp');"></span>
@@ -1213,6 +1219,20 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 东京八平米 -->
+            <div class="book-card" onclick="openModal('tokyo8m2')">
+                <div class="book-cover-wrapper"><img class="book-cover" src="images/tokyo8m2_cover_20260929.webp" alt="东京八平米封面"></div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-09-29</div>
+                    <div class="book-title">《东京八平米》</div>
+                    <div class="book-meta">[日]吉井忍 著 / 上海三联书店</div>
+                    <div class="book-tags"><span class="tag">#日本随笔</span><span class="tag">#独立生活</span><span class="tag">#城市空间</span></div>
+                    <div class="book-summary">很难说自己喜欢。读到独立与自由，也读到故作坚强、不舍和道别；事无巨细的记录，又有些像流水账。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
+
 
             <!-- 众神的样子 -->
             <div class="book-card" onclick="openModal('portraitsofgods')">
@@ -2058,6 +2078,31 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 东京八平米 -->
+    <div id="modal-tokyo8m2" class="modal-overlay" onclick="closeModalOnOverlay(event, 'tokyo8m2')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('tokyo8m2')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/tokyo8m2_cover_20260929.webp" alt="东京八平米封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《东京八平米》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>[日]吉井忍 著<br>
+                        <strong>出版：</strong>上海三联书店<br>
+                        <strong>读完时间：</strong>2026-09-29
+                    </div>
+                    <div class="modal-tags"><span class="modal-tag">#日本随笔</span><span class="modal-tag">#独立生活</span><span class="modal-tag">#城市空间</span></div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p class="original-line-layout" style="margin:0;white-space:pre-wrap">看到一半看评论才知道原来这本书被称为“亚女四大名著”，不知道评价的标准是什么，但我确实很难说我自己喜欢。
+这本书，表面上在说女性的独立和自由，在东京这个“大”城市中成就了那个“小”我的成长。她几乎是事无巨细地描述了离婚后的生活，描述了 8 平米空间里的衣食住行，也叙述了钱汤、午夜电影院、咖啡店等东京那些小小的空间和她遇到的那一个个产生了奇妙交集和情感的人们。每个人都给她留下了深深的烙印，又悄悄地离开她的生活。
+但我似乎又读出了一种，她的故作坚强，以及在用自己的方式，与这所有的一切道别。她是那么不舍，才用这么事无巨细的方式记录下所有回忆。她是那么故作坚强，才会把八平米的房间，描述得如此美好。
+其实这本书有大量的内容像流水账，但因为是女性作者写女性独立，在这个时代，可能就是红利吧。</p>
+            </div>
         </div>
     </div>
 
