@@ -752,6 +752,14 @@
             background-size: contain;
             bottom: 2px;
         }
+        /* 太白金星：装饰限定在标题下方，保留原比例，不与末尾文字叠印。 */
+        .shelf-book[data-book-id="taibai"] .spine-art {
+            top: calc(var(--book-height) - 28px);
+            bottom: 2px;
+            height: auto;
+            background-size: contain;
+            opacity: 0.68;
+        }
         /* hover 时保留装饰图案，不隐藏 */
 
         /* Modal Styles */
