@@ -1012,6 +1012,12 @@
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
                     <!-- 评价9档→200px（用户明确指定）；正式正文486字→篇幅5档→46px。 -->
+                    <button class="shelf-book" type="button" aria-label="打开《国画的细节》读书笔记" data-book-id="guohuadetails" data-title="国画的细节" data-date="读完 2026-10-09" data-cover="images/guohuadetails_cover_20261009.webp" style="--spine-art:url('images/spines/decorations/guohuadetails.webp');--spine-color:#FEFFB1;--spine-text:#AE8716;--spine-line:rgba(149,116,10,0.35);--book-height:182px;--book-width:55px;--hover-width:126px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/guohuadetails_cover_20261009.webp');"></span>
+                        <img src="images/spines/guohuadetails.webp" alt="国画的细节" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+
                     <button class="shelf-book" type="button" aria-label="打开《东京八平米》读书笔记" data-book-id="tokyo8m2" data-title="东京八平米" data-date="读完 2026-09-29" data-cover="images/tokyo8m2_cover_20260929.webp" style="--spine-art:url('images/spines/decorations/tokyo8m2.webp');--spine-color:#FAFAF7;--spine-text:#1F160B;--spine-line:rgba(230,37,26,0.28);--book-height:176px;--book-width:40px;--hover-width:136px;">
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
                         <span class="spine-cover" style="background-image:url('images/tokyo8m2_cover_20260929.webp');"></span>
@@ -1219,6 +1225,20 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 国画的细节 -->
+            <div class="book-card" onclick="openModal('guohuadetails')">
+                <div class="book-cover-wrapper"><img class="book-cover" src="images/guohuadetails_cover_20261009.webp" alt="国画的细节封面"></div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-10-09</div>
+                    <div class="book-title">《国画的细节》</div>
+                    <div class="book-meta">马菁菁 著 / 四川文艺出版社</div>
+                    <div class="book-tags"><span class="tag">#中国绘画</span><span class="tag">#画史脉络</span><span class="tag">#艺术入门</span></div>
+                    <div class="book-summary">比起记住画作的细节，更想梳理中国画的历史脉络。读来有趣，但时间线仍需自己拼接，算是有了一个基础认识。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
+
 
             <!-- 东京八平米 -->
             <div class="book-card" onclick="openModal('tokyo8m2')">
@@ -2078,6 +2098,45 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 国画的细节 -->
+    <div id="modal-guohuadetails" class="modal-overlay" onclick="closeModalOnOverlay(event, 'guohuadetails')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('guohuadetails')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/guohuadetails_cover_20261009.webp" alt="国画的细节封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《国画的细节》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>马菁菁 著<br>
+                        <strong>出版：</strong>四川文艺出版社 / 2024年7月<br>
+                        <strong>ISBN：</strong>9787541169984<br>
+                        <strong>读完时间：</strong>2026-10-09
+                    </div>
+                    <div class="modal-tags"><span class="modal-tag">#中国绘画</span><span class="modal-tag">#画史脉络</span><span class="modal-tag">#艺术入门</span></div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">一、从记细节，到理脉络</div>
+                <p>一直对中国画感兴趣。刚开始读这本书时，做了比较详细的笔记，但慢慢发现，自己大概记不住这么多细节，不如把它当作一条历史脉络，慢慢顺下来。顺便重新学习了一遍中国历史的朝代顺序，才发现自己对战国、西晋与东晋、五代十国这些时期的认识，原来一直很混乱。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">二、画史中的几个印象</div>
+                <p>这本书以传为东晋顾恺之所作的《洛神赋图》为引子，这并不是中国绘画的起点，今天看到的传世版本也多为后世摹本。顺着书中的作品看下去，能感受到不同时代的绘画如何反映艺术家们的思维方式。</p>
+                <p>1. 从人物到山水：《洛神赋图》中，人物大、景物小，山水更多是人物活动的背景。到传为隋代展子虔所作的《游春图》，山、树、人的比例更趋合理，山水本身也成为表现的主体。</p>
+                <p>2. 唐至五代的多样表达：唐代的青绿与水墨山水，让我开始留意不同的用笔和表现方式。到五代，北方山水的雄伟与江南山水的平缓连绵，形成鲜明对照。这很有意思，我也会把这些不同的表达，与那个纷乱多变的时代联系起来。</p>
+                <p>3. 宋代的文人趣味：除了宫廷绘画，文人画和更贴近日常生活的表达也让我印象深刻。读到南宋部分时，我尤其注意到留白，以及诗、书、画之间的呼应，也会联想到宋代文化生活的繁荣。不过，留白不只是为了题诗盖印，文人画也不能简单等同于民间绘画。</p>
+                <p>4. 元代的纸本与构图：读到元代部分，我开始注意纸本、水墨与笔墨趣味，但纸本绘画并不是到元代才出现。像倪瓒常见的“一河两岸”三段式构图，很容易留下印象，只是它并不能概括整个元代的画风。</p>
+                <p>5. 繁密的山水：读到明代部分时，满山满水、几乎填满画面的构图给我留下了印象。不过，这种繁密的画面并非明代才有，元代王蒙的作品中已经能看到。</p>
+                <p>6. 到清代，兴趣有所减弱：越往后读，我越觉得书中讲到的书法与绘画的关系，以及各种求新求变，没有前面那些变化那么吸引我。这是自己的阅读感受，并不是说清代绘画就没有什么可看了。</p>
+            </div>
+            <div class="modal-section">
+                <div class="modal-section-title">三、有趣，也有遗憾</div>
+                <p>有趣的是，能从这些画里慢慢看出各个朝代的脉络；遗憾的也是，书主要围绕画家和画作展开，分为山水画、人物花鸟画两部分，而不是沿着一条完整的时代线索讲述。读的时候，时间线仍然要自己梳理，常有来回跳转、反反复复的感觉。</p>
+                <p>只能算，有了一个基础认识吧。</p>
+            </div>
         </div>
     </div>
 
@@ -4930,6 +4989,14 @@
                     wrap.style.zoom = firstRowZoom.toFixed(5);
                     wrap.style.transform = '';
                     wrap.style.height = '';
+                });
+                /* 透明封面仍占滚动溢出范围；在悬停前定位，避免窄屏被右侧浮窗撑宽。 */
+                var viewportWidth = document.documentElement.clientWidth;
+                annualShelf.querySelectorAll('.shelf-book').forEach(function(book) {
+                    var cover = book.querySelector('.spine-cover');
+                    if (!cover) return;
+                    var rect = book.getBoundingClientRect();
+                    cover.classList.toggle('cover-left', viewportWidth - rect.right < rect.height * 0.66 + 20);
                 });
             }
 
