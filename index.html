@@ -974,6 +974,8 @@
                 min-height: 160px;
                 padding: 0 10px 18px;
             }
+            .annual-row { padding: 0 10px 18px; }
+            .annual-row::after { left: 10px; right: 10px; }
             .bookshelf::after {
                 left: 10px;
                 right: 10px;
@@ -4762,6 +4764,10 @@
         function autoScaleBookshelf() {
             if (!bookshelfEl || !bookshelfScroll) return;
 
+            /* 避边状态不参与缩放测量，保证首次、月份返回与resize采用同一基准。 */
+            bookshelfEl.querySelectorAll('.spine-cover').forEach(function(cover) {
+                cover.classList.remove('cover-left');
+            });
             /* 1. 完全重置，先在原始尺寸下测量 */
             bookshelfEl.style.zoom = '';
             bookshelfEl.classList.remove('is-scaled');
@@ -4793,6 +4799,13 @@
                 bookshelfEl.classList.add('is-scaled');
             }
             syncShelfJustify();
+            /* 缩放后的首行也提前避边，透明浮窗不能撑宽中等宽度屏幕。 */
+            visibleBooks.forEach(function(book) {
+                var cover = book.querySelector('.spine-cover');
+                if (!cover) return;
+                var rect = book.getBoundingClientRect();
+                cover.classList.toggle('cover-left', document.documentElement.clientWidth - rect.right < rect.height * 0.66 + 20);
+            });
         }
 
         /* resize 监听；首次缩放在全年书架完成可见书籍筛选后执行。 */
@@ -4946,6 +4959,8 @@
                         var row = document.createElement('div');
                         row.className = 'annual-row';
                         var chunk = overflow.slice(j, j + MAX_PER_ROW);
+                        /* 满20本左右铺齐，不足一行仍靠左；只分配间距，不改变单书尺寸。 */
+                        row.style.justifyContent = chunk.length === MAX_PER_ROW ? 'space-between' : 'flex-start';
                         chunk.forEach(function(orig) {
                             var clone = orig.cloneNode(true);
                             clone.hidden = false;
@@ -4997,6 +5012,17 @@
                     wrap.style.zoom = firstRowZoom.toFixed(5);
                     wrap.style.transform = '';
                     wrap.style.height = '';
+                    var row = wrap.querySelector('.annual-row');
+                    var rowBooks = Array.from(row.querySelectorAll('.shelf-book'));
+                    var rowStyle = window.getComputedStyle(row);
+                    var innerWidth = row.clientWidth - parseFloat(rowStyle.paddingLeft) - parseFloat(rowStyle.paddingRight);
+                    var booksWidth = rowBooks.reduce(function(sum, book) {
+                        return sum + parseFloat(window.getComputedStyle(book).width);
+                    }, 0);
+                    /* 满行由 space-between 分配间距；未满按20本容量限距，保留末尾空位。 */
+                    var gap = rowBooks.length === MAX_PER_ROW ? 0 : Math.max(0, Math.min(8,
+                        (innerWidth - booksWidth / rowBooks.length * MAX_PER_ROW) / (MAX_PER_ROW - 1)));
+                    row.style.gap = gap + 'px';
                 });
                 /* 透明封面仍占滚动溢出范围；在悬停前定位，避免窄屏被右侧浮窗撑宽。 */
                 var viewportWidth = document.documentElement.clientWidth;
