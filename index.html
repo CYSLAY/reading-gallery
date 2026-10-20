@@ -1021,6 +1021,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《射雕英雄传》读书笔记" data-book-id="shediao" data-title="射雕英雄传" data-date="读完 2026-10-19" data-cover="images/shediao_cover_20261019.webp" style="--spine-art:url('images/spines/decorations/shediao.webp');--spine-color:#FEFEFC;--spine-text:#100F11;--spine-line:rgba(16,15,17,0.35);--book-height:194px;--book-width:49px;--hover-width:137px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/shediao_cover_20261019.webp');background-size:contain;"></span>
+                        <img src="images/spines/shediao.webp" alt="射雕英雄传" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+
                     <!-- 评价9档→200px（用户明确指定）；正式正文486字→篇幅5档→46px。 -->
                     <button class="shelf-book" type="button" aria-label="打开《国画的细节》读书笔记" data-book-id="guohuadetails" data-title="国画的细节" data-date="读完 2026-10-09" data-cover="images/guohuadetails_cover_20261009.webp" style="--spine-art:url('images/spines/decorations/guohuadetails.webp');--spine-color:#FEFFB1;--spine-text:#AE8716;--spine-line:rgba(149,116,10,0.35);--book-height:182px;--book-width:55px;--hover-width:126px;">
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
@@ -1235,6 +1241,20 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 射雕英雄传 -->
+            <div class="book-card" onclick="openModal('shediao')">
+                <div class="book-cover-wrapper"><img class="book-cover" src="images/shediao_cover_20261019.webp" alt="射雕英雄传封面" style="object-fit:contain;"></div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-10-19</div>
+                    <div class="book-title">《射雕英雄传》</div>
+                    <div class="book-meta">金庸 著</div>
+                    <div class="book-tags"><span class="tag">#武侠小说</span><span class="tag">#人物与武功</span><span class="tag">#经典阅读</span></div>
+                    <div class="book-summary">人物与武功撑起了鲜活的江湖，但剧情的巧合与结尾的收束，仍留下了对经典的遗憾。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
+
 
             <!-- 国画的细节 -->
             <div class="book-card" onclick="openModal('guohuadetails')">
@@ -2108,6 +2128,31 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 射雕英雄传 -->
+    <div id="modal-shediao" class="modal-overlay" onclick="closeModalOnOverlay(event, 'shediao')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('shediao')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/shediao_cover_20261019.webp" alt="射雕英雄传封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《射雕英雄传》</div>
+                    <div class="modal-book-meta">
+                        <strong>作者：</strong>金庸 著<br>
+                        <strong>读完时间：</strong>2026-10-19
+                    </div>
+                    <div class="modal-tags"><span class="modal-tag">#武侠小说</span><span class="modal-tag">#人物与武功</span><span class="modal-tag">#经典阅读</span></div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p class="original-line-layout" style="margin:0;white-space:pre-wrap">一日，忽而想起，自己虽未曾读过金庸大师的作品，却从小在影视作品中耳濡目染，心向往之，便开始读起射雕三部曲。一读才发现，篇幅竟比想象中长了许多，这才知道什么叫长篇小说。
+从小就听过郭靖、黄蓉的名字，对东邪、西毒、南帝、北丐也有所耳闻，但杨康、完颜洪烈、丘处机、梅超风、江南七怪等角色，就要陌生得多。读下来，人物的性格也跟想象中不太一样。每个角色似乎都活了过来，也让许多设定变得更有意思：比如郭靖的笨拙，反而让他练习内功时能够一心一意；黄蓉的机灵，则让她学会逍遥游和打狗棒法显得理所当然。
+除了人物，各种武功更是构成这个武侠世界的核心元素。降龙十八掌、九阴真经、一阳指、弹指神通、蛤蟆功……一门门独步天下的武功，让每个角色的努力、骄傲、狂妄、慈悲与洒脱都有迹可循。
+但我觉得，剧情上的硬伤其实不少，最无奈的就是“宇宙中心牛家村”。为了推进剧情，各路人物仿佛都能横跨大半个中国，凑到同一个村子里，郭靖和黄蓉还要躲在密室中，偷听偷看这一切。中间险些被拆穿时，确实惊心动魄，但又靠“闹鬼”把事情糊弄过去，实在让人难以理解。同样无奈的，还有许多人物突如其来的“圣母心”：一次次放过仇人，对普通人却又常常不顾其死活，确实匪夷所思。
+全书临近结尾，郭靖与成吉思汗讨论何为英雄，这样的收束也让我颇感意外。读完全书后，我多次翻回去重读最后一段，仍觉得有些难以置信。虽然知道还有《神雕侠侣》会让故事继续，但这种意犹未尽，更像是一种对“经典竟只有如此”的遗憾。</p>
+            </div>
         </div>
     </div>
 
