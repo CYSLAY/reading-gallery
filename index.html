@@ -1021,6 +1021,12 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《幸福的习惯》读书笔记" data-book-id="happyhabits" data-title="幸福的习惯" data-date="读完 2026-11-06" data-cover="images/happyhabits_cover_20261106.webp" style="--spine-art:url('images/spines/decorations/happyhabits.webp');--spine-color:#FEF9F6;--spine-text:#5F4483;--spine-line:rgba(95,68,131,0.35);--book-height:158px;--book-width:34px;--hover-width:113px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 32px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/happyhabits_cover_20261106.webp');background-size:contain;"></span>
+                        <img src="images/spines/happyhabits_20261106.webp" alt="幸福的习惯" class="spine-title-img" style="height:calc(var(--book-height) - 68px);">
+                    </button>
+
                     <button class="shelf-book" type="button" aria-label="打开《神雕侠侣（一）》读书笔记" data-book-id="shendiao" data-spine-id="shendiao-1" data-title="神雕侠侣（一）" data-date="读完 2026-11-05" data-cover="images/shendiao_cover_20261105.webp" style="--spine-art:url('images/spines/decorations/shendiao.webp');--spine-color:#FCF6EA;--spine-text:#1D1C18;--spine-line:rgba(29,28,24,0.35);--book-height:170px;--book-width:46px;--hover-width:125px;">
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 34px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
                         <span class="spine-cover" style="background-image:url('images/shendiao_cover_20261105.webp');background-size:contain;"></span>
@@ -1278,6 +1284,19 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 幸福的习惯 -->
+            <div class="book-card" onclick="openModal('happyhabits')">
+                <div class="book-cover-wrapper"><img class="book-cover" src="images/happyhabits_cover_20261106.webp" alt="幸福的习惯封面" style="object-fit:contain;"></div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-11-06</div>
+                    <div class="book-title">《幸福的习惯》</div>
+                    <div class="book-meta">[美] 泰勒·本-沙哈尔 著 / 喻丰 译 / 中信出版社</div>
+                    <div class="book-tags"><span class="tag">#幸福与习惯</span><span class="tag">#心理学</span><span class="tag">#微小改变</span></div>
+                    <div class="book-summary">典型的外文畅销书，有几个可取的小点。快速翻完，缓解一下看完《神雕侠侣》的痛苦。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 神雕侠侣：四卷共用一条阅读记录 -->
             <div class="book-card" onclick="openModal('shendiao')">
@@ -2178,6 +2197,26 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 幸福的习惯 -->
+    <div id="modal-happyhabits" class="modal-overlay" onclick="closeModalOnOverlay(event, 'happyhabits')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('happyhabits')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/happyhabits_cover_20261106.webp" alt="幸福的习惯封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《幸福的习惯》</div>
+                    <div class="modal-book-meta"><strong>作者：</strong>[美] 泰勒·本-沙哈尔<br><strong>译者：</strong>喻丰<br><strong>出版：</strong>中信出版社 / 2026年9月<br><strong>读完时间：</strong>2026-11-06</div>
+                    <div class="modal-tags"><span class="modal-tag">#幸福与习惯</span><span class="modal-tag">#心理学</span><span class="modal-tag">#微小改变</span></div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p class="original-line-layout" style="margin:0;white-space:pre-wrap">典型的外文畅销书，提出了“最小可行干预”的概念，强调幸福可以从微小的改变做起。
+有几个可取的小点，比如接纳负面情绪，以及通过重复形成心理暗示和引导。
+快速翻完，缓解一下看完《神雕侠侣》的痛苦。</p>
+            </div>
         </div>
     </div>
 
