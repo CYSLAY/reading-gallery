@@ -1021,6 +1021,27 @@
             <div class="bookshelf-layout">
                 <div class="bookshelf-scroll">
                 <div class="bookshelf">
+                    <button class="shelf-book" type="button" aria-label="打开《神雕侠侣（一）》读书笔记" data-book-id="shendiao" data-spine-id="shendiao-1" data-title="神雕侠侣（一）" data-date="读完 2026-11-05" data-cover="images/shendiao_cover_20261105.webp" style="--spine-art:url('images/spines/decorations/shendiao.webp');--spine-color:#FCF6EA;--spine-text:#1D1C18;--spine-line:rgba(29,28,24,0.35);--book-height:170px;--book-width:46px;--hover-width:125px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 34px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/shendiao_cover_20261105.webp');background-size:contain;"></span>
+                        <img src="images/spines/shendiao_volume_1_20261105.webp" alt="神雕侠侣（一）" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+                    <button class="shelf-book" type="button" aria-label="打开《神雕侠侣（二）》读书笔记" data-book-id="shendiao" data-spine-id="shendiao-2" data-title="神雕侠侣（二）" data-date="读完 2026-11-05" data-cover="images/shendiao_cover_20261105.webp" style="--spine-art:url('images/spines/decorations/shendiao.webp');--spine-color:#FCF6EA;--spine-text:#1D1C18;--spine-line:rgba(29,28,24,0.35);--book-height:170px;--book-width:46px;--hover-width:125px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 34px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/shendiao_cover_20261105.webp');background-size:contain;"></span>
+                        <img src="images/spines/shendiao_volume_2_20261105.webp" alt="神雕侠侣（二）" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+                    <button class="shelf-book" type="button" aria-label="打开《神雕侠侣（三）》读书笔记" data-book-id="shendiao" data-spine-id="shendiao-3" data-title="神雕侠侣（三）" data-date="读完 2026-11-05" data-cover="images/shendiao_cover_20261105.webp" style="--spine-art:url('images/spines/decorations/shendiao.webp');--spine-color:#FCF6EA;--spine-text:#1D1C18;--spine-line:rgba(29,28,24,0.35);--book-height:170px;--book-width:46px;--hover-width:125px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 34px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/shendiao_cover_20261105.webp');background-size:contain;"></span>
+                        <img src="images/spines/shendiao_volume_3_20261105.webp" alt="神雕侠侣（三）" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+                    <button class="shelf-book" type="button" aria-label="打开《神雕侠侣（四）》读书笔记" data-book-id="shendiao" data-spine-id="shendiao-4" data-title="神雕侠侣（四）" data-date="读完 2026-11-05" data-cover="images/shendiao_cover_20261105.webp" style="--spine-art:url('images/spines/decorations/shendiao.webp');--spine-color:#FCF6EA;--spine-text:#1D1C18;--spine-line:rgba(29,28,24,0.35);--book-height:170px;--book-width:46px;--hover-width:125px;">
+                        <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 34px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
+                        <span class="spine-cover" style="background-image:url('images/shendiao_cover_20261105.webp');background-size:contain;"></span>
+                        <img src="images/spines/shendiao_volume_4_20261105.webp" alt="神雕侠侣（四）" class="spine-title-img" style="height:calc(var(--book-height) - 72px);">
+                    </button>
+
                     <!-- 射雕四卷：独立书脊标识，共用同一封面与modal-shediao；阅读记录不重复。 -->
                     <button class="shelf-book" type="button" aria-label="打开《射雕英雄传（一）》读书笔记" data-book-id="shediao" data-spine-id="shediao-1" data-title="射雕英雄传（一）" data-date="读完 2026-10-19" data-cover="images/shediao_cover_20261019.webp" style="--spine-art:url('images/spines/decorations/shediao.webp');--spine-color:#FEFEFC;--spine-text:#100F11;--spine-line:rgba(16,15,17,0.35);--book-height:194px;--book-width:49px;--hover-width:137px;">
                         <span class="spine-art" aria-hidden="true" style="top:calc(var(--book-height) - 42px);bottom:2px;height:auto;background-size:contain;opacity:0.66;filter:none;"></span>
@@ -1257,6 +1278,19 @@
         </section>
 
         <div class="books-grid">
+
+            <!-- 神雕侠侣：四卷共用一条阅读记录 -->
+            <div class="book-card" onclick="openModal('shendiao')">
+                <div class="book-cover-wrapper"><img class="book-cover" src="images/shendiao_cover_20261105.webp" alt="神雕侠侣封面" style="object-fit:contain;"></div>
+                <div class="book-info">
+                    <div class="finish-date">读完 2026-11-05</div>
+                    <div class="book-title">《神雕侠侣》</div>
+                    <div class="book-meta">金庸 著</div>
+                    <div class="book-tags"><span class="tag">#武侠小说</span><span class="tag">#人物与情感</span><span class="tag">#经典阅读</span></div>
+                    <div class="book-summary">精彩章节让人不愿放下，但过长的篇幅、令人难受的情感纠葛和突兀的结尾，仍让这次阅读充满无奈。</div>
+                    <div class="click-hint">查看完整笔记 ↓</div>
+                </div>
+            </div>
 
             <!-- 射雕英雄传 -->
             <div class="book-card" onclick="openModal('shediao')">
@@ -2144,6 +2178,32 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal: 神雕侠侣 -->
+    <div id="modal-shendiao" class="modal-overlay" onclick="closeModalOnOverlay(event, 'shendiao')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('shendiao')" aria-label="关闭">×</button>
+            <div class="modal-header">
+                <img class="modal-cover" src="images/shendiao_cover_20261105.webp" alt="神雕侠侣封面" style="object-fit:contain;">
+                <div class="modal-header-info">
+                    <div class="modal-book-title">《神雕侠侣》</div>
+                    <div class="modal-book-meta"><strong>作者：</strong>金庸 著<br><strong>读完时间：</strong>2026-11-05</div>
+                    <div class="modal-tags"><span class="modal-tag">#武侠小说</span><span class="modal-tag">#人物与情感</span><span class="modal-tag">#经典阅读</span></div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <p class="original-line-layout" style="margin:0;white-space:pre-wrap">能感受到一种在连载过程中刻意拉长篇幅的痕迹，以至于觉得这部书长得离谱，竟然整整看了16天。读的时候，一直会想到“又臭又长”四个字，但中间又有很多精彩章节，让人不愿放下。
+<span class="note-inline-heading" style="font-weight:700">关于龙过</span>
+一直觉得，小龙女从小在古墓中长大，再加上修习古墓派功法，在亲密关系中的表现很像回避型依恋。和豆包聊过之后，又觉得杨过更像焦虑型依恋，情绪容易起伏，也容易误会。因此，很多时候读得很难受：两个让我觉得心理状态都不太健康的人，不断“创飞”所有人，许多决策和想法，似乎都与整个世界格格不入。
+<span class="note-inline-heading" style="font-weight:700">关于芙过</span>
+在我看来，这对CP的纠葛，本质上就是郭芙爱而不得后的“疯批报复”。郭芙的性格，几乎就是我最讨厌的那类人的性格。
+<span class="note-inline-heading" style="font-weight:700">关于襄过</span>
+这是一条让我非常无语的情感线，甚至觉得是作者的恶趣味。杨过为郭襄做了那么多事，却还要包装成“侠之大者，为国为民”；或者，用郭襄过生日来合理化他做这些事的动机。读起来确实很爽，但不得不说，非常牵强。但凡这些事是为小龙女做的，都没什么。可这样做，真的不会让郭襄和郭靖、黄蓉误会吗？
+<span class="note-inline-heading" style="font-weight:700">关于结尾</span>
+只能说莫名其妙。我理解，为了新的连载，会做一些铺垫，但读起来真的像是想到哪儿写到哪儿。我没感受到伏笔、暗线和前后呼应，只能说，能力有限。</p>
+            </div>
         </div>
     </div>
 
